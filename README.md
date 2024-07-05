@@ -23,7 +23,7 @@ Adentro de la siguiente carpeta esta la pagina web:
 │       └── index.astro
 ```
 
-##**Folders**
+## **Folders**
 
 Adentro de los folders hay diferntes archivos con la terminacion `.astro`:
 
