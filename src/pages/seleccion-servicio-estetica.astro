@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/card-servicio.astro'
+import '../styles/StylesGlobal.css'
+---
+
+<Layout title='Servicio-comida'>
+    <div id="main-content">
+        <main>
+            <section class="hero">
+                <img src="https://i.ibb.co/XpXsfJW/IMG-20240609-WA0019.jpg" alt="El solar de rosa" class="hero-image">
+            </section>
+            <!-- Content Section -->
+            <section class="profiles">
+                <!--Obligatorio los atributos -->
+                <Card 
+                href="/cliente/hair shop"
+                nombre="Hair Shop"
+                descripcion="Bienvenidos a Hair Shop: Donde la belleza y el glamour se encuentran. Somos tu destino para transformar tu cabello con estilo y elegancia. Nuestro equipo de expertos está listo para realzar tu look. ¡Te esperamos!"
+                profesion="Paluqueria"
+                src="https://i.ibb.co/5KQJz0D/IMG-20240627-152420.jpg" />
+
+                <!-- Repeat similar profile blocks as needed -->
+            </section>
+        </main>
+
+</Layout>
+<style>
+
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profiles {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile {
+        max-width: 90%;
+    }
+}
+</style>

@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/card-servicio.astro'
+import '../styles/StylesGlobal.css'
+---
+
+<Layout title='Servicio'>
+    <div id="main-content">
+        <main>
+            <section class="hero">
+                <img src="https://i.ibb.co/XpXsfJW/IMG-20240609-WA0019.jpg" alt="El solar de rosa" class="hero-image">
+            </section>
+            <!-- Content Section -->
+            <section class="profiles">
+                <!--Obligatorio los atributos -->
+                <Card 
+                href="/cliente/Rest.Solar"
+                nombre="El Solar de Rosa"
+                descripcion="El Solar de Rosa, un rincón culinario donde los sabores criollos se entrelazan con la nostalgia y la sazón de antaño. Aquí, los aromas de la abuela y la tradición se fusionan en cada bocado. ¿Estás listo para un viaje gastronómico que despierte tus sentidos?"
+                profesion="Restaurante"
+                src="https://i.ibb.co/ZMz4w7y/Captura-de-pantalla-2024-06-18-173316-removebg-preview.png" />
+
+                <!-- Repeat similar profile blocks as needed -->
+            </section>
+        </main>
+
+</Layout>
+<style>
+
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profiles {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile {
+        max-width: 90%;
+    }
+}
+</style>
