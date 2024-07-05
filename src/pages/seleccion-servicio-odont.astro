@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/card-servicio.astro'
+import '../styles/StylesGlobal.css'
+---
+
+<Layout title='Servicio'>
+    <div id="main-content">
+        <main>
+            <section class="hero">
+                <img src="https://i.ibb.co/XpXsfJW/IMG-20240609-WA0019.jpg" alt="El solar de rosa" class="hero-image">
+            </section>
+            <!-- Content Section -->
+            <section class="profiles">
+                <!--Obligatorio los atributos -->
+                <Card 
+                href="/cliente/dra.medina"
+                nombre="Dra. Veriosca Medina"
+                descripcion="Especialista en el cuidado para los más consentidos de la casa. Profesional en el tratamiento con los pacientes pequeños así como también les brinda mucha confianza."
+                profesion="Odontólogo"
+                src="https://i.ibb.co/TvTfwZ6/Dise-o-sin-t-tulo-20240704-221820-0000.png" />
+
+                <Card
+                href="/cliente/clinica veneto"
+                nombre="Clínica Vento Odontología"
+                descripcion="En Vento Odontología, entendemos que una sonrisa hermosa va más allá de la estética; es una ventana a su bienestar general. Por eso, nuestro equipo de profesionales altamente calificados está dedicado a asegurar que cada tratamiento sea personalizado, utilizando técnicas de vanguardia para prevenir, diagnosticar y tratar cualquier infección dental con la máxima precisión. "
+                profesion="Odontólogo"
+                src="https://i.ibb.co/HH635fs/20240704-222030-0000-removebg-preview-1.png" />
+                
+                <Card
+                href="/cliente/od.mariangel"
+                nombre="Od. Mariangel Mogollon"
+                descripcion="Soy la Dra. Mariangel Mogollón, una apasionada odontóloga con años de experiencia en cuidado bucal. Mi enfoque se basa en brindar tratamientos personalizados y de alta calidad para cada paciente. ¡Agenda tu cita hoy mismo!"
+                profesion="Odontólogo"
+                src="https://i.ibb.co/fSf7SMy/Dise-o-sin-t-tulo-20240704-221929-0000.png"  />
+                <!-- Repeat similar profile blocks as needed -->
+            </section>
+        </main>
+
+</Layout>
+<style>
+
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profiles {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile {
+        max-width: 90%;
+    }
+}
+</style>

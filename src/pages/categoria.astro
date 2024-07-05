@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+
+<Layout title='Categoria'>
+    <div id="main-content">
+        <main>
+            <section class="hero">
+                <img src="https://i.ibb.co/CmtxgpK/Servicios-20240627-182712-0000.jpg" alt="El solar de rosa" class="hero-image">
+            </section>
+            <!-- Categorías Section -->
+            <section class="categories">
+                    <a href="" >
+                        <img src="https://i.ibb.co/FwZ9jz7/Flayer-hogar-oficial.png" alt="Imagen-Hogar" class="category">
+                    </a>
+
+                    <a href="./subcategoria/subcategoria-salud" >
+                        <img src="https://i.ibb.co/ZWSLNrb/Flayer-Salud-Oficial.png" alt="Imagen-salud" class="category">
+                    </a>
+
+                    <a href="" >
+                        <img src="https://i.ibb.co/S63dTZH/Flayer-mecanica-oficial.png" alt="Imagen-automotriz" class="category">
+                        
+                    </a>
+
+                    <a href="/seleccionar servicio-estetica/index.html" >
+                        <img src="https://i.ibb.co/9Yr8DnZ/Flayer-Oficial-Belleza.png" alt="Imagen-estetica" class="category">
+                    </a>
+
+                    <a href="/seleccionar servicio-comida/index.html" >
+                        <img src="https://i.ibb.co/FDFHtt3/Flayer-Comida-oficial.png" alt="Imagen-comida" class="category">
+                    </a>
+
+            </section>
+        </main>
+</Layout>
+
+<style>
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero img {
+    width: 50%;
+
+}
+
+/* Categories Section */
+.categories {
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    gap: 7rem ;
+}
+
+.category {
+    border-radius: 10px;
+    background-size: cover;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 0 10px 0 #0007;
+    min-width: 200px;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+    align-items: center;
+}
+
+
+.category:hover {
+    transform: scale(1.05);
+}
+
+.category p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Responsive adjustments for nav */
+@media (max-width: 850px) {
+
+    .categories,
+    .services {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .service {
+        max-width: 90%;
+    }
+
+    .categories{
+        gap:2.5rem;
+    }
+    .partner-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__search-b{
+        display: none;
+    }
+
+    .hero img{
+        width: 100%;
+    }
+}
+</style>

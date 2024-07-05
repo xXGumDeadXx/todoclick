@@ -1,0 +1,100 @@
+---
+import Layout from '../../layouts/Layout.astro'
+---
+<Layout title='Salud'>
+<main>
+        <section class="hero">
+            <img src="https://i.ibb.co/MDq640c/Medicina-20240703-194003-0000.png" alt="Medicina-20240703-194003-0000" class="hero-image">
+        </section>
+        <!-- Categorías Section -->
+        <section class="categories">
+                <a href="" class="category">
+                    <img src="https://i.ibb.co/41J00Gh/Icono-pediatria.png" alt="Icono-pediatria" >
+                    <p>Pediatria</p>
+                </a>
+
+                <a href="/seleccionar servicio/index.html" class="category">
+                    <img src="https://i.ibb.co/NCzjxGq/icono-psicolog-a.png" alt="icono-psicolog-a" class="scale">
+                    <p>Psicologos</p>
+                </a>
+
+                <a href="../seleccion-servicio-odont" class="category">
+                    <img src="https://i.ibb.co/F0vqhzH/Iconos-odontolog-a.png" alt="" >
+                    <p>Odontologia</p>
+                </a>
+
+                <a href="/seleccionar servicio-estetica/index.html" class="category" >
+                    <img src="https://i.ibb.co/CwvBCrx/Iconos-oftalmolog-a.png" alt="Iconos-oftalmolog-a" class="scale" >
+                    <p>Oftalmologia</p>
+                </a>
+
+                <a href="/seleccionar servicio-comida/index.html"  class="category" >
+                    <img src="https://i.ibb.co/SyfwP7k/cono-neumologia.png" alt="cono-neumologia">
+                    <p>Neumonologia</p>
+                </a>
+        </section>
+</Layout>
+<style>
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero img {
+    width: 50%;
+
+}
+
+
+    /* Categories Section */
+.categories {
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    gap: 7rem ;
+}
+
+.category {
+    background-color: transparent;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 0 10px 0 #00000036;
+    min-width: 200px;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    padding-top: .5rem;
+}
+
+.category:hover {
+    transform: scale(1.05);
+}
+
+.category p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.category img{
+    width: 70px;
+}
+
+.scale{
+    transform: scale(2);
+    padding:25px 0;
+}
+
+</style>

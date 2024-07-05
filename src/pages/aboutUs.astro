@@ -1,0 +1,192 @@
+---
+import  Layout  from "../layouts/Layout.astro";
+---
+
+<Layout title="Sobre nosotros">
+    <div id="main-content">
+        <main>
+            <section class="hero">
+                <img src="https://i.ibb.co/28v4wCQ/nissan-sentra.jpg" alt="nissan-sentra" class="nissan">
+            </section>
+            <section class="testimonios">
+                <h2>Opiniones de nuestros clientes</h2>
+                <div class="carousel">
+                    <div class="carousel__item active">
+                        <blockquote>
+                            <p>"Sabemos que tendremos que acompañar a cada cliente en su crecimiento con las herramientas adecuadas: Habilidad, con su capacidad de entrenarnos, su paciencia, y facilidad de uso, fue sobre para lograrlo."</p>
+                            <cite>Florencia Santovs Derhorea, Mi Empresa</cite>
+                        </blockquote>
+                    </div>
+                    <div class="carousel__item">
+                        <blockquote>
+                            <p>"Una experiencia increíble. Todo el equipo fue muy profesional y siempre estuvieron disponibles para ayudarnos."</p>
+                            <cite>Carlos González, Empresa XYZ</cite>
+                        </blockquote>
+                    </div>
+                    <div class="carousel__item">
+                        <blockquote>
+                            <p>"Muy satisfecho con el servicio recibido. Nos ayudaron a crecer de manera significativa."</p>
+                            <cite>María López, Compañía ABC</cite>
+                        </blockquote>
+                    </div>
+                </div>
+                <button class="carousel__btn carousel__btn--prev">&lt;</button>
+                <button class="carousel__btn carousel__btn--next">&gt;</button>
+            </section>
+            <section class="about section-with-image">
+                <img src="https://i.ibb.co/whdCRjM/Logo-Todo-Klick-2048x2048-4096x4096.png" alt="icono">
+                <div class="text">
+                    <h2>Sobre nuestra empresa</h2>
+                    <p>Somos la esencia de Venezuela, impulsando marcas y profesionales hacia el éxito con estrategias que resuenan y conectan. Tu triunfo, nuestra pasión.</p>
+                </div>
+            </section>
+            <section class="mission section-with-image">
+                <img src="https://i.ibb.co/whdCRjM/Logo-Todo-Klick-2048x2048-4096x4096.png" alt="icono" >
+                <div class="text">
+                    <h2>Nuestra misión: Ayudar a millones de empresas a crecer mejor</h2>
+                    <p>Charlando como amigos, te comparto nuestro sueño: ver tu negocio prosperar rápidamente. Te ofrecemos estrategias efectivas para que tus metas sean una realidad veloz. Siempre con elegancia y respeto. ¿Te suena bien?</p>
+                </div>
+            </section>
+            <section class="history section-with-image">
+                <img src="https://i.ibb.co/whdCRjM/Logo-Todo-Klick-2048x2048-4096x4096.png" alt="icono">
+                <div class="text">
+                    <h2>Nuestra historia</h2>
+                    <p>La historia de Todoclick se origina en un momento de inspiración, cuando un padre, al ver a una doctora con dificultades para destacarse en las redes sociales, se preguntó cómo podría ayudarla. Junto a su hijo, concibieron la idea de una empresa que pudiera ser el trampolín para el éxito digital de muchos. Así nació Todoclick, cimentada en la unión familiar y el ímpetu de tres estudiantes universitarios, amigos del hijo, especializados en programación y diseño.</p>
+                    <p>Ellos fueron piezas clave en la materialización de este sueño, trabajando incansablemente para convertir la visión de un hombre en una realidad tangible. Hoy, Todoclick representa la culminación de ese esfuerzo conjunto: una empresa venezolana que se dedica a abrir caminos en el mundo digital para negocios y profesionales, permitiéndoles florecer en sus pasiones. Somos Todoclick, el resultado de una idea que se transformó en una misión, y esa misión en una historia de éxito y ayuda mutua</p>
+                </div>
+            </section>
+        </main>
+</Layout>
+
+<style>
+    
+.testimonios {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carousel__item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    display: none;
+}
+
+.carousel__item.active {
+    display: block;
+}
+
+.carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.carousel__btn--prev {
+    left: 10px;
+}
+
+.carousel__btn--next {
+    right: 10px;
+}
+
+.about {
+    background-image: url('https://i.ibb.co/QKKnbPJ/icono.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.about h2,
+.about p {
+    position: relative;
+    z-index: 2;
+}
+
+.about img {
+    display: none;
+    filter: invert(1);
+}
+
+.section-with-image {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    text-align: left;
+}
+
+.section-with-image img {
+    max-width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.mission {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.mission img {
+    order: 1; /* Cambiado de 1 a 0 */
+    margin-right: 10px; /* Cambiado de left a right */
+}
+
+.history {
+    display: flex;
+    align-items: center;
+}
+
+.history img {
+    order: 0;
+}
+@media (max-width: 850px) {
+    .section-with-image {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-with-image img {
+        margin: 0 0 20px 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .history {
+        flex-direction: column-reverse;
+    }
+
+    .history img {
+        margin: 20px 0 0 0;
+    }
+
+}
+</style>
