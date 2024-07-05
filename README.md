@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Todoklick baby
 
 ```sh
 npm create astro@latest -- --template basics
