@@ -18,6 +18,7 @@ const { title } = Astro.props;
         <meta name="title" content="Todoklick">
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
+        <meta name="theme-color" content="#49b" />
 		<link rel="icon" type="image/svg+xml" href="https://i.ibb.co/99pMrXz/Logo-Todo-Klick-2048x2048-4096x4096-copia.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -372,5 +373,13 @@ const { title } = Astro.props;
 	.nav__search-b{
         display:none
     }
+    .nav__title {
+    width: 4rem;
+    margin: 0;
+    padding: 0 15px 0 0;
+    font-size: 1rem;
+    color: white;
+    cursor:default;
+}
 }
 </style>

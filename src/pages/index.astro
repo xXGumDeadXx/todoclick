@@ -1,18 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/StylesGlobal.css'
+import Hero from '../components/Hero.astro'
 ---
 
 <Layout title="Todoklick">
 	<main>
-		<section class="hero">
-			<img src="https://i.ibb.co/XpXsfJW/IMG-20240609-WA0019.jpg" alt="El solar de rosa" class="hero-image">
-		</section>
+		<Hero>
+
+        </Hero>
 		<!-- Categorías Section -->
 		<section class="categories">
 			<a href="/categoria">
 				<div class="category">
-					<img src="https://i.ibb.co/mF3Md4f/Icono-de-categorias.png" alt="Categorías">
+					<img src="https://i.ibb.co/8BDwpmh/categoria.png"  alt="icono de Categorías">
 					<p>Categorías</p>
 				</div>
 			</a>
@@ -20,14 +21,14 @@ import '../styles/StylesGlobal.css'
 			
 			<a href="">
 			<div class="category">
-				<img src="https://cdn-icons-png.freepik.com/512/596/596092.png" alt="Publica con nosotros">
+				<img src="/icono-promocion.png" alt="icono de promocion">
 				<p>Publica con nosotros</p>
 			</div>
 			</a>
 
 			<a href="/aboutUs">
 			<div class="category">
-				<img src="https://i.ibb.co/tcmW6sX/IMG-20240621-WA0094.jpg"  alt="¿Quiénes somos?">
+				<img src="https://i.ibb.co/55krg05/acerca-de.png"  alt="icono de quienes somos">
 				<p>¿Quiénes somos?</p>
 			</div>
 			</a>
@@ -37,23 +38,19 @@ import '../styles/StylesGlobal.css'
 		<!-- Servicios Section -->
 		<section class="services">
 			<div class="service">
-				<img src="https://i.ibb.co/tZ2HPRX/Imagen-de-Whats-App-2024-05-22-a-las-12-26-11-268e2807.jpg"  alt="Atiende tu auto">
-				<p>Atiende tu auto</p>
+				<img src="https://i.ibb.co/6ZHGKpm/Imagen-de-Whats-App-2024-07-05-a-las-20-22-15-d7c39bde.jpg"  alt="Atiende tu auto">
 				<a href="#" class="btn">Ver más</a>
 			</div>
 			<div class="service">
-				<img src="https://i.ibb.co/4FbWCqS/Imagen-de-Whats-App-2024-05-21-a-las-10-25-55-e5e11598.jpg" alt="Cuida tu salud">
-				<p>Cuida tu salud</p>
+				<img src="https://i.ibb.co/FW7FNCw/Imagen-de-Whats-App-2024-07-05-a-las-20-22-15-5639c4a4.jpg" alt="Cuida tu salud">
 				<a href="./subcategoria/subcategoria-salud" class="btn">Ver más</a>
 			</div>
 			<div class="service">
-				<img src="https://i.ibb.co/Gxgys93/Imagen-de-Whats-App-2024-05-21-a-las-11-21-41-7d713abc.jpg" alt="Renueva tus espacios">
-				<p>Renueva tus espacios</p>
+				<img src="https://i.ibb.co/dQ52LyV/Imagen-de-Whats-App-2024-07-05-a-las-20-22-15-fdbe11d4.jpg" alt="Renueva tus espacios">
 				<a href="#" class="btn">Ver más</a>
 			</div>
 			<div class="service">
-				<img src="https://i.ibb.co/dfxcBPy/Imagen-de-Whats-App-2024-05-22-a-las-09-01-53-c81d4c2c.jpg" alt="Realza tu belleza">
-				<p>Realza tu belleza</p>
+				<img src="https://i.ibb.co/fQkMw0n/Imagen-de-Whats-App-2024-07-05-a-las-20-22-15-ebda165d.jpg" alt="Realza tu belleza">
 				<a href="/seleccionar servicio-estetica/index.html" class="btn">Ver más</a>
 			</div>
 		</section>
@@ -109,6 +106,19 @@ import '../styles/StylesGlobal.css'
 </Layout>
 
 <style>
+
+.hero {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.hero-image{
+    border-radius: 0 0 1rem 1rem ;
+ }
+
+
 /* Categories and Services */
 .categories,
 .services {
