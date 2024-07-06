@@ -1,0 +1,87 @@
+---
+
+---
+
+
+<slot >
+    <div class="hero">
+        <ul>
+            <li>
+                <a href="../cliente/dra.medina">
+                    <img src="/hero1.jpg" alt="" class="hero-image">
+                </a>
+            </li>
+            <li>
+                <a href="../cliente/clinica veneto">
+                    <img src="/hero2.jpg" alt="" class="hero-image">
+                </a>
+            </li>
+        </ul>
+    </div>
+</slot>
+<script>
+
+</script>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    width: 50%;
+    height: auto;
+    margin: auto;
+
+    overflow: hidden;
+
+
+
+}
+
+.hero-image{
+    border-radius: 0 0 1rem 1rem ;
+}
+
+
+.hero ul{
+    display: flex;
+    width: 200%;
+    animation: slide 10s infinite alternate ease-in-out;
+}
+
+.hero li{
+    width: 100%;
+    list-style: none;
+}
+
+.hero img{
+    width: 100%;
+}
+
+
+@keyframes slide{
+    0%{
+        margin-left: 0%;
+    }
+    25%{margin-left: 0%;}
+
+    50%{
+        margin-left: -100%;
+    }
+    100%{margin-left: -100%;}
+}
+
+@media (max-width:850px){
+    .hero{
+        width: 100%;
+        margin: auto;
+
+        overflow: hidden;
+    }
+    .hero ul{
+        display: flex;
+        width: 200%;
+    }
+}
+</style>
