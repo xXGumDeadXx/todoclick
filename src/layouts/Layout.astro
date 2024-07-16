@@ -49,8 +49,8 @@ const { title } = Astro.props;
 					</svg>
 				</div>
 				<ul class="nav__list" id="nav-list">
-					<li class="nav__item"><a href="Index.html">Inicio</a></li>
-					<li class="nav__item"><a href="#">Servicios</a></li>
+					<li class="nav__item"><a href="/">Inicio</a></li>
+					<li class="nav__item"><a href="/categoria">Servicios</a></li>
 					<li class="nav__item"><a href="#">Contacto</a></li>
 					<li class="nav__item"><a href="#">Ofertas</a></li>
 					<li class="nav__item"><a href="#">Publicas</a></li>
@@ -102,29 +102,6 @@ const { title } = Astro.props;
             searchToggle.addEventListener("click", function() {
                 toggleSearch();
             });
-
-            const carouselItems = document.querySelectorAll(".carousel__item");
-            const prevBtn = document.querySelector(".carousel__btn--prev");
-            const nextBtn = document.querySelector(".carousel__btn--next");
-            let currentIndex = 0;
-
-            function showCarouselItem(index) {
-                carouselItems.forEach((item, i) => {
-                    item.classList.toggle("active", i === index);
-                });
-            }
-
-            prevBtn.addEventListener("click", function() {
-                currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-                showCarouselItem(currentIndex);
-            });
-
-            nextBtn.addEventListener("click", function() {
-                currentIndex = (currentIndex + 1) % carouselItems.length;
-                showCarouselItem(currentIndex);
-            });
-
-            showCarouselItem(currentIndex);
 
         });
 	</script>
@@ -305,7 +282,7 @@ const { title } = Astro.props;
     flex-direction: column;
     align-items: center;
     justify-content: top;
-    gap: 0px;
+
 }
 
 .nav__item a {
