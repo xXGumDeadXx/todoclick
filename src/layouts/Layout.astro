@@ -13,115 +13,133 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-        <meta name="title" content="Todoklick">
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-        <meta name="theme-color" content="#49b" />
-		<link rel="icon" type="image/svg+xml" href="/logo/todoklick.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<header class="header">
-			<nav class="header__nav">
-				<div class="nav__left">
-                    <a href="/">
-					    <img src="/logo/todoklick.png" alt="icono todoclick" class="nav__icon">
-                    </a>
-					<h2 class="nav__title">Todoklick</h2>
-				</div>
-				<form class="nav__center">
-					<input type="text" class="nav__search" placeholder="Buscar...">
-					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"  viewBox="0 0 16 16" id="search-toggle" class="nav__search-icon">
-						<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-					</svg>
-					<button class="nav__search-b">
-						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="27" fill="currentColor"  viewBox="0 0 16 16" id="search-toggle" >
-							<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-						</svg> 
-					</button>
-				</form>
-				<div class="nav__right">
-					<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor"  viewBox="0 0 16 16" id="nav-toggle" class="nav__toggle">
-						<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-					</svg>
-				</div>
-				<ul class="nav__list" id="nav-list">
-					<li class="nav__item"><a href="/">Inicio</a></li>
-					<li class="nav__item"><a href="/categoria">Servicios</a></li>
-					<li class="nav__item"><a href="#">Contacto</a></li>
-					<li class="nav__item"><a href="#">Ofertas</a></li>
-					<li class="nav__item"><a href="#">Publicas</a></li>
-				</ul>
-				<div class="nav__overlay" id="nav-overlay"></div>
-			</nav>
-		</header>
-		<slot />
-	</body>
-    <Footers/>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const navToggle = document.getElementById("nav-toggle");
-            const navList = document.getElementById("nav-list");
-            const navOverlay = document.getElementById("nav-overlay");
-            const searchToggle = document.getElementById("search-toggle");
-            const navSearch = document.querySelector(".nav__search");
+<head>
+    <meta charset="UTF-8" />
+    <meta name="title" content="Todoklick">
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#49b" />
+    <link rel="icon" type="image/svg+xml" href="/logo/todoklick.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="nav__left">
+                <a href="/">
+                    <img src="/logo/todoklick.png" alt="icono todoclick" class="nav__icon">
+                </a>
+                <h2 class="nav__title">Todoklick</h2>
+            </div>
+            <form class="nav__center">
+                <input type="text" class="nav__search" placeholder="Buscar...">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"  id="search-toggle" class="nav__search-icon">
+                        path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"></path>
+                    </svg>
+                <button class="nav__search-b">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="27" fill="currentColor" viewBox="0 0 16 16" id="search-toggle">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                </button>
+            </form>
+            <div class="nav__right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" viewBox="0 0 16 16" id="nav-toggle" class="nav__toggle">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </div>
+            <ul class="nav__list" id="nav-list">
+                <li class="nav__item"><a href="/">Inicio</a></li>
+                <li class="nav__item"><a href="/categoria">Servicios</a></li>
+                <li class="nav__item"><a href="#">Contacto</a></li>
+                <li class="nav__item"><a href="#">Ofertas</a></li>
+                <li class="nav__item"><a href="#">Publicas</a></li>
+            </ul>
+            <div class="nav__overlay" id="nav-overlay"></div>
+        </nav>
+    </header>
+    <slot />
+</body>
+<Footers/>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const navToggle = document.getElementById("nav-toggle");
+        const navList = document.getElementById("nav-list");
+        const navOverlay = document.getElementById("nav-overlay");
+        const searchToggle = document.getElementById("search-toggle");
+        const navSearch = document.querySelector(".nav__search");
+        const searchIcon = document.getElementById("search-toggle");
 
-            function isSmallScreen() {
-                return window.innerWidth <= 850;
+        function isSmallScreen() {
+            return window.innerWidth <= 850;
+        }
+
+        function toggleNav() {
+            if (isSmallScreen()) {
+                navList.classList.toggle("active");
+                navOverlay.classList.toggle("active");
+                // Ocultar la barra de búsqueda al mostrar el menú desplegable
+                navSearch.classList.remove("active");
+                searchIcon.style.display = "block";
+            } else {
+                navList.classList.remove("active");
+                navOverlay.classList.remove("active");
             }
+        }
 
-            function toggleNav() {
-                if (isSmallScreen()) {
-                    navList.classList.toggle("active");
-                    navOverlay.classList.toggle("active");
-                    // Ocultar la barra de búsqueda al mostrar el menú desplegable
-                    navSearch.classList.remove("active");
+        function toggleSearch() {
+            if (isSmallScreen()) {
+                navSearch.classList.toggle("active");
+                if (navSearch.classList.contains("active")) {
+                    searchIcon.style.display = "none";
                 } else {
-                    navList.classList.remove("active");
-                    navOverlay.classList.remove("active");
+                    searchIcon.style.display = "block";
                 }
             }
+        }
 
-            function toggleSearch() {
-                if (isSmallScreen()) {
-                    navSearch.classList.toggle("active");
-                }
-            }
-
-            navToggle.addEventListener("click", function() {
-                toggleNav();
-            });
-
-            navOverlay.addEventListener("click", function() {
-                toggleNav();
-            });
-
-            searchToggle.addEventListener("click", function() {
-                toggleSearch();
-            });
-
+        navToggle.addEventListener("click", function() {
+            toggleNav();
         });
-	</script>
-</html>
+
+        navOverlay.addEventListener("click", function() {
+            toggleNav();
+        });
+
+        searchToggle.addEventListener("click", function() {
+            toggleSearch();
+        });
+
+        document.addEventListener("click", function(event) {
+            if (!event.target.closest(".nav__center")) {
+                navSearch.classList.remove("active");
+                searchIcon.style.display = "block";
+            }
+        });
+
+        navSearch.addEventListener("focus", function() {
+            searchIcon.style.display = "none";
+        });
+
+        navSearch.addEventListener("blur", function() {
+            searchIcon.style.display = "block";
+        });
+    });
+</script>
 <style>
-
-
-:root{
-    --color-principal:#235;
+:root {
+    --color-principal: #235;
     --color-secundario: #49b;
-
 }
-.header{
-	margin-bottom:60px ;
+
+.header {
+    margin-bottom: 60px;
 }
 
 .header__nav {
     width: 100%;
     height: 60px;
-    background-image: linear-gradient(135deg,var(--color-principal), var(--color-secundario));
+    background-image: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
     box-sizing: border-box;
     position: fixed;
     top: 0;
@@ -144,7 +162,6 @@ const { title } = Astro.props;
     flex: 1;
     justify-content: flex-start;
 }
-
 
 .nav__center {
     flex: 1;
@@ -171,6 +188,8 @@ const { title } = Astro.props;
     height: 40px;
     cursor: pointer;
     display: none;
+    position: relative; /*Necesario para ajustar verticalmente con top */
+    top: 0;
 }
 
 .nav__icon {
@@ -181,17 +200,16 @@ const { title } = Astro.props;
     transition-duration: 0.2s;
 }
 
-.nav__icon:hover{
+.nav__icon:hover {
     transform: scale(1.1);
 }
-
 
 .nav__title {
     margin: 0;
     padding: 0 15px 0 0;
     font-size: 24px;
     color: white;
-    cursor:default;
+    cursor: default;
 }
 
 .nav__search {
@@ -206,22 +224,20 @@ const { title } = Astro.props;
     z-index: 2000;
     outline: none;
     transition-property: outline;
-    transition-duration: .2s ;
+    transition-duration: .2s;
 }
 
-.nav__search-b{
+.nav__search-b {
     border: none;
     background-color: var(--color-secundario);
     width: 40px;
     height: 34px;
-    border-radius: 0 5px 5px 0 ;
+    border-radius: 0 5px 5px 0;
 }
 
-.nav__search-b > svg{
+.nav__search-b > svg {
     fill: white;
 }
-
-
 
 .nav__search-btn {
     background: none;
@@ -254,7 +270,6 @@ const { title } = Astro.props;
     font-size: 12px;
 }
 
-
 .nav__overlay {
     display: none;
     position: fixed;
@@ -282,7 +297,6 @@ const { title } = Astro.props;
     flex-direction: column;
     align-items: center;
     justify-content: top;
-
 }
 
 .nav__item a {
@@ -339,6 +353,8 @@ const { title } = Astro.props;
     .nav__search.active {
         display: block;
         width: calc(100% - 60px);
+        top: 50%; /* Ajusta para centrar verticalmente */
+        transform: translateY(-50%); /* Ajusta para centrar verticalmente */
     }
 
     .nav__center {
@@ -347,16 +363,17 @@ const { title } = Astro.props;
         width: 100%;
         position: relative;
     }
-	.nav__search-b{
-        display:none
+    .nav__search-b {
+        display: none
     }
     .nav__title {
-    width: 4rem;
-    margin: 0;
-    padding: 0 15px 0 0;
-    font-size: 1rem;
-    color: white;
-    cursor:default;
-}
+        width: 4rem;
+        margin: 0;
+        padding: 0 15px 0 0;
+        font-size: 1rem;
+        color: white;
+        cursor: default;
+    }
 }
 </style>
+</html>
