@@ -21,7 +21,7 @@ import Hero from '../components/Hero.astro'
 			
 			<a href="">
 			<div class="category">
-				<img src="/icono-promocion.png" alt="icono de promocion">
+				<img src="/promo.png" alt="icono de promocion">
 				<p>Publica con nosotros</p>
 			</div>
 			</a>
@@ -106,7 +106,9 @@ import Hero from '../components/Hero.astro'
 </Layout>
 
 <style>
-
+main{
+    background-color: #367fa912;
+}
 .hero {
     width: 50%;
     height: auto;
@@ -133,9 +135,13 @@ import Hero from '../components/Hero.astro'
     margin: 10px;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px hwb(0 0% 100% / 0.1);
     padding: 10px;
     transition: transform 0.3s;
+}
+
+.category{
+    width: 140px;
 }
 
 .category img,
