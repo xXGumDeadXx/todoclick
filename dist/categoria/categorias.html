@@ -27,7 +27,7 @@
             .hero[data-astro-cid-nnsxwabn] img[data-astro-cid-nnsxwabn]{width:100%}
         }
     </style>
-    <script type="module" src="{% static '/_astro/hoisted.IYNkIzFP.js' %}"></script>
+    <script type="module" src="{% static '/_astro/hoisted.DtcEVq1D.js' %}"></script>
 </head>
 <body data-astro-cid-sckkx6r4> 
     <header class="header" data-astro-cid-sckkx6r4> 
@@ -38,17 +38,17 @@
                 </a> 
                 <h2 class="nav__title" data-astro-cid-sckkx6r4>Todoklick</h2> 
             </div> 
-            <form class="nav__center" data-astro-cid-sckkx6r4> 
-                <input type="text" class="nav__search" placeholder="Buscar..." data-astro-cid-sckkx6r4> 
+            <form class="nav__center" method="GET" action="{%url 'search' %}"> 
+                <input type="text" class="nav__search" name="q" placeholder="Buscar..." data-astro-cid-sckkx6r4> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16" id="search-toggle" class="nav__search-icon" data-astro-cid-sckkx6r4> 
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" data-astro-cid-sckkx6r4></path> 
                 </svg> 
-                <button class="nav__search-b" data-astro-cid-sckkx6r4> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="27" fill="currentColor" viewBox="0 0 16 16" id="search-toggle" data-astro-cid-sckkx6r4> 
+                <button class="nav__search-b" type="submit" data-astro-cid-sckkx6r4> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 16 16" id="search-toggle" data-astro-cid-sckkx6r4> 
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" data-astro-cid-sckkx6r4></path> 
                     </svg> 
                 </button>
-                </form> 
+            </form> 
                 <div class="nav__right" data-astro-cid-sckkx6r4> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" viewBox="0 0 16 16" id="nav-toggle" class="nav__toggle" data-astro-cid-sckkx6r4> 
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" data-astro-cid-sckkx6r4></path> 
@@ -74,7 +74,7 @@
                     <a href data-astro-cid-nnsxwabn>
                         <img src="{% static 'Servicio-hogar.jpg' %}" alt="Imagen-Hogar" class="category" data-astro-cid-nnsxwabn> 
                     </a> 
-                    <a href="{%url 'cuida-tu-salud' %}" data-astro-cid-nnsxwabn> 
+                    <a href="{%url 'salud' %}" data-astro-cid-nnsxwabn> 
                         <img src="{% static 'Servicio-salud.jpg' %}" alt="Imagen-salud" class="category" data-astro-cid-nnsxwabn> 
                     </a> 
                     <a href data-astro-cid-nnsxwabn> 

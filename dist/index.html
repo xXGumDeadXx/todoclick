@@ -24,13 +24,13 @@
                     </a> 
                     <h2 class="nav__title" data-astro-cid-sckkx6r4>Todoklick</h2> 
                 </div> 
-                <form class="nav__center" data-astro-cid-sckkx6r4> 
-                    <input type="text" class="nav__search" placeholder="Buscar..." data-astro-cid-sckkx6r4> 
+                <form class="nav__center" method="GET" action="{%url 'search' %}"> 
+                    <input type="text" class="nav__search" name="q" placeholder="Buscar..." data-astro-cid-sckkx6r4> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16" id="search-toggle" class="nav__search-icon" data-astro-cid-sckkx6r4> 
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" data-astro-cid-sckkx6r4></path> 
                     </svg> 
-                    <button class="nav__search-b" data-astro-cid-sckkx6r4> 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="27" fill="currentColor" viewBox="0 0 16 16" id="search-toggle" data-astro-cid-sckkx6r4> 
+                    <button class="nav__search-b" type="submit" data-astro-cid-sckkx6r4> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 16 16" id="search-toggle" data-astro-cid-sckkx6r4> 
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" data-astro-cid-sckkx6r4></path> 
                         </svg> 
                     </button>
@@ -71,7 +71,7 @@
                         <p data-astro-cid-j7pv25f6>Publica con nosotros</p>
                     </div> 
                 </a> 
-                <a href="{%url '/aboutUs' %}" data-astro-cid-j7pv25f6> 
+                <a href="{%url 'aboutUs' %}" data-astro-cid-j7pv25f6> 
                     <div class="category" data-astro-cid-j7pv25f6> 
                         <img src="https://i.ibb.co/55krg05/acerca-de.png" alt="icono de quienes somos" data-astro-cid-j7pv25f6> 
                         <p data-astro-cid-j7pv25f6>¿Quiénes somos?</p> 
@@ -86,7 +86,7 @@
                 </div> 
                 <div class="service" data-astro-cid-j7pv25f6> 
                     <img src="https://i.ibb.co/FW7FNCw/Imagen-de-Whats-App-2024-07-05-a-las-20-22-15-5639c4a4.jpg" alt="Cuida tu salud" data-astro-cid-j7pv25f6> 
-                    <a href="{%url 'cuida-tu-salud' %}" class="btn" data-astro-cid-j7pv25f6>Ver más</a> 
+                    <a href="{%url 'salud' %}" class="btn" data-astro-cid-j7pv25f6>Ver más</a> 
                 </div> 
                 <div class="service" data-astro-cid-j7pv25f6> 
                     <img src="https://i.ibb.co/dQ52LyV/Imagen-de-Whats-App-2024-07-05-a-las-20-22-15-fdbe11d4.jpg" alt="Renueva tus espacios" data-astro-cid-j7pv25f6> 
@@ -94,7 +94,7 @@
                 </div> 
                 <div class="service" data-astro-cid-j7pv25f6> 
                     <img src="https://i.ibb.co/fQkMw0n/Imagen-de-Whats-App-2024-07-05-a-las-20-22-15-ebda165d.jpg" alt="Realza tu belleza" data-astro-cid-j7pv25f6> 
-                    <a href="{%url '/estetica' %}" class="btn" data-astro-cid-j7pv25f6>Ver más</a> 
+                    <a href="{%url 'estetica' %}" class="btn" data-astro-cid-j7pv25f6>Ver más</a> 
                 </div>
             </section> 
             <!-- Video Section --> 
@@ -140,8 +140,8 @@
                     <img src="https://i.ibb.co/2hcJdrx/IMG-20240526-WA0062.jpg" alt="Partner 1" data-astro-cid-j7pv25f6> 
                     <img src="https://i.ibb.co/2hcJdrx/IMG-20240526-WA0062.jpg" alt="Partner 2" data-astro-cid-j7pv25f6> 
                     <img src="https://i.ibb.co/2hcJdrx/IMG-20240526-WA0062.jpg" alt="Partner 3" data-astro-cid-j7pv25f6> 
-                    <ima src="https://i.ibb.co/2hcJdrx/IMG-20240526-WA0062.jpg" alt="Partner 4" data-astro-cid-j7pv25f6> 
-                    <ima src="https://i.ibb.co/2hcJdrx/IMG-20240526-WA0062.jpg" alt="Partner 5" data-astro-cid-j7pv25f6> 
+                    <img src="https://i.ibb.co/2hcJdrx/IMG-20240526-WA0062.jpg" alt="Partner 4" data-astro-cid-j7pv25f6> 
+                    <img src="https://i.ibb.co/2hcJdrx/IMG-20240526-WA0062.jpg" alt="Partner 5" data-astro-cid-j7pv25f6> 
                 </div>
             </section> 
         </main> 
