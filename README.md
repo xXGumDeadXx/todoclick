@@ -34,3 +34,4 @@ Adentro de los folders hay diferntes archivos con la terminacion `.astro`:
 | `Layout`                 | Ahi se guardan los layout que va a necesitar la pagina.Ejemplo: el navbar mas el footer                 |
 | `pages`                  | Esa carpeta representa solos las paginas web que vamos a usar, tmb cuenta con otras subcarpetas         |
 
+xd
