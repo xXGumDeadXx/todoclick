@@ -1,0 +1,65 @@
+---
+const {nombre, src, job} = Astro.props
+---
+
+<section>
+    <img src="https://i.pinimg.com/236x/2f/97/f0/2f97f05b32547f54ef1bdf99cd207c90.jpg" alt="Team Member 1">
+    <div class="member">
+        <h3>{nombre}</h3>
+        <p>{job}</p>
+        <div class="more-info">
+            <slot/>
+        </div>
+    </div>
+
+</section>
+
+<style>
+    *{
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .member {
+    margin: 20px;
+    background-color: #49b;
+    min-width: 350px;
+    height: 250px;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding-top:10rem ;
+    transition: all .2s ease-in-out;
+    transition-delay: 0s;
+    color: aliceblue;
+}
+
+img{
+    border-radius: 50%;
+    width: 150px;
+    box-shadow: 0 0 .5rem #ccc;
+
+}
+section{
+    position: relative;
+}
+section img{
+    position: absolute;
+    left: 32%;
+}
+.member:hover{
+    height: 23rem;
+    box-shadow: 0 0 2rem #ccc;
+}
+.member:not(:hover){
+    transition-delay: .5s;
+}
+
+.more-info{
+    background-color:  #3b84a1;
+    border-radius: 1rem 1rem 0 0;
+    height: 100%;
+    padding: 5px;
+
+}
+
+</style>

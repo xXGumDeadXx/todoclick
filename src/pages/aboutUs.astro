@@ -1,192 +1,510 @@
 ---
 import  Layout  from "../layouts/Layout.astro";
+import CardTeam from "../components/card-team.astro";
 ---
 
 <Layout title="Sobre nosotros">
     <div id="main-content">
         <main>
-            <section class="hero">
-                <img src="https://i.ibb.co/28v4wCQ/nissan-sentra.jpg" alt="nissan-sentra" class="nissan">
+            <!-- Te voy a comentar todo pa que no te pierdas cabezon -->
+    <!-- Header -->
+    <header class="hero">
+        <img src="https://i.pinimg.com/736x/27/e0/e8/27e0e898a5545862971724e241abcd31.jpg" alt="Hero Image">
+        <div class="hero-text">
+            <h1>Todoklick <br>¿Quienes Somos?</h1>
+            <p>Somos la esencia de Venezuela, impulsando marcas y profesionales hacia el éxito con estrategias que resuenan y conectan. Tu triunfo, nuestra pasión.</p>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <body>
+            <!-- Aquí irían las otras secciones de tu página -->
+            <header>
+                <h1>Sobre nosotros</h1>
+                <p>La mentalidad «Día 1» de Amazon es una cultura y un modelo operativo que pone a nuestros clientes en el centro de todo lo que hacemos, y nos lleva a actuar siempre con la misma energía y espíritu innovador del primer día.</p>
+                <button class="sign-up">publica/contactanos</button>
+            </header>
+        
+            <section class="about-us">
+                <img src="https://i.ibb.co/qJ1hcJp/descarga.webp" alt="Team working">
+                <div class="content">
+                    <h2>Nuestros Valores</h2>
+                    <p>El diccionario define el valor como “cualidad o conjunto de cualidades por las que una persona o cosa es apreciada o bien considerada”, a lo que se agrega ”alcance de la significación, importancia o validez de una cosa”.</p>
+                </div>
             </section>
-            <section class="testimonios">
-                <h2>Opiniones de nuestros clientes</h2>
-                <div class="carousel">
-                    <div class="carousel__item active">
-                        <blockquote>
-                            <p>"Sabemos que tendremos que acompañar a cada cliente en su crecimiento con las herramientas adecuadas: Habilidad, con su capacidad de entrenarnos, su paciencia, y facilidad de uso, fue sobre para lograrlo."</p>
-                            <cite>Florencia Santovs Derhorea, Mi Empresa</cite>
-                        </blockquote>
+        
+            <section class="stats">
+                <div class="stat">
+                    <h3>Comienzo</h3>
+                    <p>El diccionario define el valor como “cualidad o conjunto de cualidades por las que una persona o cosa es apreciada o bien considerada”, a lo que se agrega ”alcance de la significación, importancia o validez de una cosa”.</p>
+                </div>
+                <div class="stat">
+                    <h3>En donde estamos</h3>
+                    <p>Una empresa privada es una organización cuya aportación de capital proviene principalmente de accionistas, inversores privados o propietarios.</p>
+                </div>
+                <div class="stat">
+                    <h3>Vision Futura</h3>
+                    <p>la visión de la compañía Bimbo es “Ser el líder mundial en productos de panadería, reconocido por la excelencia en calidad, innovación y sostenibilidad”.</p>
+                </div>
+            </section>
+        
+            <section class="video-demo">
+                        <iframe width="350" height="300" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+        
+            <!-- Nueva Sección: Nuestro Equipo -->
+            <section class="team">
+                <h2>Nuestro Equipo</h2>
+                <div class="team-members">
+                    <CardTeam src="https://i.ibb.co/0VXjnty/IMG-20240626-WA0029.jpg" nombre="Angel Linarez" job="Programador">
+                        <p>angeljlinarez@gmail.com</p>
+                        <p>correo kajksjakjsa</p>
+                        <a href="" class="link">CV</a>
+                    </CardTeam>
+                </div>
+            </section>
+        
+            <!-- Nueva Sección: News -->
+            <section class="news">
+                <h2>News</h2>
+                <div class="news-items">
+                    <div class="news-item">
+                        <img src="https://i.ibb.co/J2W71H8/live-reportage-conceptual-logo-created-vector-27040952.jpg" alt="News 1">
+                        <div class="news-content">
+                            <h3>Nuevas funciones</h3>
+                            <p>Implementamos un slider un nav y un footer con animaciones hermosas</p>
+                        </div>
                     </div>
-                    <div class="carousel__item">
-                        <blockquote>
-                            <p>"Una experiencia increíble. Todo el equipo fue muy profesional y siempre estuvieron disponibles para ayudarnos."</p>
-                            <cite>Carlos González, Empresa XYZ</cite>
-                        </blockquote>
+                    <div class="news-item">
+                        <img src="https://i.ibb.co/J2W71H8/live-reportage-conceptual-logo-created-vector-27040952.jpg" alt="News 2">
+                        <div class="news-content">
+                            <h3>Personal Despedido</h3>
+                            <p>Despidieron a Ricardo por no trabajar y solo estar jugando blox fruit</p>
+                        </div>
                     </div>
-                    <div class="carousel__item">
-                        <blockquote>
-                            <p>"Muy satisfecho con el servicio recibido. Nos ayudaron a crecer de manera significativa."</p>
-                            <cite>María López, Compañía ABC</cite>
-                        </blockquote>
+                    <div class="news-item">
+                        <img src="https://i.ibb.co/J2W71H8/live-reportage-conceptual-logo-created-vector-27040952.jpg" alt="News 3">
+                        <div class="news-content">
+                            <h3>Lanzamiento</h3>
+                            <p>El lanzamiento de la pagina esta en proceso, saldra cuando salga silksong</p>
+                        </div>
                     </div>
                 </div>
-                <button class="carousel__btn carousel__btn--prev">&lt;</button>
-                <button class="carousel__btn carousel__btn--next">&gt;</button>
             </section>
-            <section class="about section-with-image">
-                <img src="https://i.ibb.co/whdCRjM/Logo-Todo-Klick-2048x2048-4096x4096.png" alt="icono">
-                <div class="text">
-                    <h2>Sobre nuestra empresa</h2>
-                    <p>Somos la esencia de Venezuela, impulsando marcas y profesionales hacia el éxito con estrategias que resuenan y conectan. Tu triunfo, nuestra pasión.</p>
-                </div>
+        
+            <!-- Sección de Contacto -->
+            <section class="contact">
+                <h2>Quieres saber como contactarnos?</h2>
+                <button>Ver mas</button>
             </section>
-            <section class="mission section-with-image">
-                <img src="https://i.ibb.co/whdCRjM/Logo-Todo-Klick-2048x2048-4096x4096.png" alt="icono" >
-                <div class="text">
-                    <h2>Nuestra misión: Ayudar a millones de empresas a crecer mejor</h2>
-                    <p>Charlando como amigos, te comparto nuestro sueño: ver tu negocio prosperar rápidamente. Te ofrecemos estrategias efectivas para que tus metas sean una realidad veloz. Siempre con elegancia y respeto. ¿Te suena bien?</p>
-                </div>
-            </section>
-            <section class="history section-with-image">
-                <img src="https://i.ibb.co/whdCRjM/Logo-Todo-Klick-2048x2048-4096x4096.png" alt="icono">
-                <div class="text">
-                    <h2>Nuestra historia</h2>
-                    <p>La historia de Todoclick se origina en un momento de inspiración, cuando un padre, al ver a una doctora con dificultades para destacarse en las redes sociales, se preguntó cómo podría ayudarla. Junto a su hijo, concibieron la idea de una empresa que pudiera ser el trampolín para el éxito digital de muchos. Así nació Todoclick, cimentada en la unión familiar y el ímpetu de tres estudiantes universitarios, amigos del hijo, especializados en programación y diseño.</p>
-                    <p>Ellos fueron piezas clave en la materialización de este sueño, trabajando incansablemente para convertir la visión de un hombre en una realidad tangible. Hoy, Todoclick representa la culminación de ese esfuerzo conjunto: una empresa venezolana que se dedica a abrir caminos en el mundo digital para negocios y profesionales, permitiéndoles florecer en sus pasiones. Somos Todoclick, el resultado de una idea que se transformó en una misión, y esa misión en una historia de éxito y ayuda mutua</p>
-                </div>
-            </section>
+        
+        </body>
+        
+        <!-- Seccion del Dream Team -->
+        <section class="team">
+            <h2>Nuestro Equipo</h2>
+            <div class="team-members">
+                <CardTeam src="https://i.ibb.co/0VXjnty/IMG-20240626-WA0029.jpg" nombre="Angel Linarez" job="Programador">
+                    <p>angeljlinarez@gmail.com</p>
+                    <p>correo kajksjakjsa</p>
+                    <a href="" class="link">CV</a>
+                </CardTeam>
+            </div>
+        </section>
+
+        <!-- La imagen que puso Michele de una officina xd -->
+        <section class="office">
+            <img src="https://i.ibb.co/0VXjnty/IMG-20240626-WA0029.jpg" alt="Office Image">
+        </section>
+    </main>
+
+    <!-- Footer(esto no va en el footer pero tu entiendes xd) -->
+    <footer>
+        <div class="contact">
+            <h3>Contacto</h3>
+            <p>Michele</p>
+            <p>Dirección: Michele Piñuela, Acarigua portuguesa</p>
+            <p>Tel: +34 971 302 684</p>
+            <p>Email: Todoklick@gmail.com</p>
+        </div>
+        <div class="map">
+            <!-- El frame hay que poner uno que concuerde con la casa de alguien -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.8941177623486!2d1.4480957153700513!3d38.906256979571235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1299482a67a72385%3A0x9a92ec9b8b06ff9!2sMarina%20Botafoch%2C%2007800%20Ibiza%2C%20Illes%20Balears%2C%20Spain!5e0!3m2!1sen!2s!4v1622711096691!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
         </main>
 </Layout>
 
 <style>
-    
-.testimonios {
+  body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            color: white;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .link:hover{
+            text-decoration: underline;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Estilos del Header */
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            filter: blur(3px) grayscale(0.3);
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero-text p {
+            font-size: 1.5em;
+        }
+
+        /* Seccion de Estilos */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about, .values, .history, .team, .office {
+            background: #f8f8f8;
+            margin: 20px 0;
+        }
+
+        .about-images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .value {
+            margin: 20px;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .timeline-item {
+            margin: 10px 0;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around;
+        }
+
+        .contact p, .contact h3 {
+            margin: 5px 0;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 300px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2em;
+            }
+
+            .hero-text p {
+                font-size: 1.2em;
+            }
+
+            .about-images, .team-members {
+                flex-direction: column;
+            }
+
+            .value, .member {
+                min-width: 100%;
+            }
+
+
+            .contact, .map {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 1.5em;
+            }
+
+            .hero-text p {
+                font-size: 1em;
+            }
+
+            section {
+                padding: 20px 10px;
+            }
+
+        }
+
+     header {
     text-align: center;
-    padding: 20px;
-    position: relative;
+    padding: 2rem 1rem;
+    background-color: #f4f4f4;
 }
 
-.carousel {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-.carousel__item {
-    min-width: 100%;
-    transition: transform 0.5s ease;
-    display: none;
+header p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.carousel__item.active {
-    display: block;
-}
-
-.carousel__btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
+.sign-up {
+    background-color: #5e4db2;
+    color: #fff;
     border: none;
-    font-size: 2em;
+    padding: 0.75rem 1.5rem;
     cursor: pointer;
-    z-index: 100;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-.carousel__btn--prev {
-    left: 10px;
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: #fff;
 }
 
-.carousel__btn--next {
-    right: 10px;
+.about-us img {
+    max-width: 100%;
+    width: 40%;
+    margin-right: 2rem;
 }
 
-.about {
-    background-image: url('https://i.ibb.co/QKKnbPJ/icono.png');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 40px 20px;
+.about-us .content {
+    flex: 1;
+}
+
+.about-us h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-us p {
+    font-size: 1rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+    background-color: #f4f4f4;
     text-align: center;
-    position: relative;
 }
 
-.about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+.stats .stat {
+    flex: 1;
 }
 
-.about h2,
-.about p {
-    position: relative;
-    z-index: 2;
+.stats h3 {
+    font-size: 2rem;
+    color: #5e4db2;
+    margin-bottom: 0.5rem;
 }
 
-.about img {
-    display: none;
-    filter: invert(1);
+.stats p {
+    font-size: 1rem;
 }
 
-.section-with-image {
+.video-demo {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.video-demo video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+/* Estilos para la Sección de Nuestro Equipo */
+.our-team {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.our-team h2 {
+    margin-bottom: 2rem;
+}
+
+.team-members {
     display: flex;
-    align-items: center;
-    padding: 20px;
-    text-align: left;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items:center;
 }
 
-.section-with-image img {
-    max-width: 300px;
+.member {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 2rem;
+}
+
+.member img {
+    max-width: 100%;
+    border-radius: 40%;
+    margin-bottom: 1rem;
+}
+
+.member h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.member p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Estilos para la Sección de Noticias (News) */
+.news {
+    padding: 2rem 1rem;
+    background-color: #333;
+    text-align: center;
+}
+
+.news h2 {
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.news-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    background-color: #fff;
+    width: 30%;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.news-item img {
+    max-width: 100%;
     height: auto;
-    margin-right: 20px;
 }
 
-.mission {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+.news-content {
+    padding: 1rem;
 }
 
-.mission img {
-    order: 1; /* Cambiado de 1 a 0 */
-    margin-right: 10px; /* Cambiado de left a right */
+.news-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
-.history {
-    display: flex;
-    align-items: center;
+.news-content p {
+    font-size: 1rem;
+    color: #555;
 }
 
-.history img {
-    order: 0;
+/* Estilos para la Sección de Contacto */
+.contact {
+    padding: 2rem 1rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
 }
-@media (max-width: 850px) {
-    .section-with-image {
+
+.contact h2 {
+    margin-bottom: 1rem;
+}
+
+.contact button {
+    background-color: #5e4db2;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Media Queries para el diseño responsive */
+@media (max-width: 768px) {
+    .about-us {
         flex-direction: column;
-        text-align: center;
     }
 
-    .section-with-image img {
-        margin: 0 0 20px 0;
+    .about-us img {
         width: 100%;
-        height: auto;
+        margin-bottom: 1rem;
     }
 
-    .history {
-        flex-direction: column-reverse;
+    .stats {
+        flex-direction: column;
     }
 
-    .history img {
-        margin: 20px 0 0 0;
+    .stats .stat {
+        margin-bottom: 1rem;
     }
 
+    .team-members, .news-items {
+        flex-direction: column;
+    }
+
+    .team-members .member, .news-item {
+        width: 70%;
+    }
+}
+
+.item {
+    margin-top: 10px;
+}
+
+.item p {
+    font-size: 14px;
+    margin: 0;
 }
 </style>

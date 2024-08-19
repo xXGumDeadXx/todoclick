@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+
+<Layout title="Sin resultado ">
+    <div class="info">
+        <img src="/logo/todoklick.png" alt="logo todoklick">
+        <h1>Sin resultados</h1>
+        <p>Parece que no hemos encontrado resultado de: <span>"  "</span></p>
+        <div class="container">
+            <a href="/">Inicio</a>
+            <a href="/categoria">Categorias</a>
+        </div>
+    </div>
+</Layout>
+<style>
+    :root{
+    --color-principal:#235;
+    --color-secundario: #49b;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    h1, p{
+        color: white;
+    }
+    div img{
+        width: 250px;
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 83.7vh;
+        background-image: linear-gradient(var(--color-principal), var(--color-secundario));
+        gap: 2rem;
+        
+    }
+    div p{
+        font-size: large;
+        font-weight: bold;
+        width: 50%;
+        text-align: center;
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+    a{
+        width: auto;
+        height: auto;
+        border: #7fbfd8 solid 2px;
+        padding: 1rem;
+        transition: all .2s ease;
+        border-radius: .5rem;
+    }
+
+    a:hover{
+        transform: scale(1.05);
+        background-color: #49b;
+    }
+    
+</style>

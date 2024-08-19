@@ -8,12 +8,17 @@
         <ul>
             <li>
                 <a href="/cliente/dra.medina">
-                    <img src="/hero/hero1.jpg" alt="" class="hero-image">
+                    <img src="/hero/hero6.webp" alt="" class="hero-image">
                 </a>
             </li>
             <li>
                 <a href="/clinica veneto">
-                    <img src="/hero/hero2.jpg" alt="" class="hero-image">
+                    <img src="/hero/Mecanica" alt="" class="hero-image">
+                </a>
+            </li>
+            <li>
+                <a href="/clinica veneto">
+                    <img src="/hero/hero5.webp" alt="" class="hero-image">
                 </a>
             </li>
         </ul>
@@ -29,25 +34,23 @@
     padding: 0;
 }
 .hero {
-    width: 50%;
+    width: 100%;
     height: auto;
     margin: auto;
 
     overflow: hidden;
-
+    
 
 
 }
 
-.hero-image{
-    border-radius: 0 0 1rem 1rem ;
-}
+
 
 
 .hero ul{
     display: flex;
-    width: 200%;
-    animation: slide 5s infinite alternate ease-in-out;
+    width: 300%;
+    animation: slide 15s infinite alternate ease-in-out;
 }
 
 .hero li{
@@ -57,19 +60,20 @@
 
 .hero img{
     width: 100%;
+    object-fit: cover;
 }
 
 
 @keyframes slide{
-    0%{
-        margin-left: 0%;
-    }
-    25%{margin-left: 0%;}
+    0%{margin-left: 0;}
+    35%{margin-left: 0;}
 
-    50%{
-        margin-left: -100%;
-    }
-    100%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    50%{margin-left: -100%;}
+    70%{margin-left: -100%;}
+
+    75%{margin-left: -200%;}
+    100%{margin-left: -200%;}
 }
 
 @media (max-width:850px){
@@ -81,7 +85,7 @@
     }
     .hero ul{
         display: flex;
-        width: 200%;
+        width: 300%;
     }
 }
 </style>

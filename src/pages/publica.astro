@@ -1,0 +1,456 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+    
+<Layout title='Publica'>
+
+    <body>
+        <header>
+            <div class="container">
+                <div class="hero">
+                    <h1>Publica con Nosotros</h1>
+                    <h2>¿Quieres publicar tu página web?</h2>
+                    <p>Estamos aquí para ayudarte</p>
+                    <button class="btn1" id="open-modal">
+                        Ver mas
+                    </button>
+                    
+                </div>
+            </div>
+        </header>
+
+        <section class="modal containerr">
+
+            <div class="modal__container" id="modal-container">
+                <div class="modal__content">
+                    <div class="modal__close close-modal" title="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                          </svg>
+                    </div>
+
+                    <img src="/logo/todoklick-oscuro.png" alt="" class="modal__img">
+
+                    <h1 class="modal__title">Contactanos!</h1>
+                    <p class="modal__description">AQui va algo tenso</p>
+                    <div class="flex-container">
+                        <div>
+                            <h4>Whatsapp</h4>
+                            <p>+54 424-254.5478</p>
+                        </div>
+                        <div>
+                            <h4>Correo</h4>
+                            <p>Todoklick@gmail.com</p>
+                        </div>
+                    </div>
+                    <button class="modal__button-link close-modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="slider">
+            <div class="containerr">
+                <div class="slides" id="slides">
+                    <div class="slide">
+                        <img src="https://i.ibb.co/6gmpZ9p/IMG-20240806-WA0008.jpg" alt="Slide 1">
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.ibb.co/6gmpZ9p/IMG-20240806-WA0008.jpg" alt="Slide 2">
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.ibb.co/6gmpZ9p/IMG-20240806-WA0008.jpg" alt="Slide 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content">
+            <div class="container">
+                <h2>¿Por qué Publicar con Nosotros?</h2>
+                <div class="benefits">
+                    <div class="benefit-card">
+                        <img src="https://i.ibb.co/zn17JZM/IMG-20240621-WA0101.jpg" alt="Alcance Global">
+                        <h3>Alcance Global</h3>
+                        <p>Llega a una audiencia nacional con facilidad.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="https://i.ibb.co/VCGsgMN/IMG-20240621-WA0111.jpg" alt="Tecnología de Punta">
+                        <h3>Tecnología de Punta</h3>
+                        <p>Utilizamos las últimas tecnologías para maximizar tu impacto.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="https://i.ibb.co/jfLZ4Q4/IMG-20240621-WA0105.jpg" alt="Crecimiento">
+                        <h3>Crecimiento</h3>
+                        <p>Haz que tu marca crezca con nosotros.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="https://i.ibb.co/2P5kWG2/IMG-20240621-WA0106.jpg" alt="Optimización para móviles">
+                        <h3>Optimización para móviles</h3>
+                        <p>Tu sitio web estará adaptado y optimizado para una experiencia de navegación perfecta.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="https://i.ibb.co/SXM5dF0/IMG-20240621-WA0110.jpg" alt="Gratis y sin registro">
+                        <h3>Gratis y sin registro</h3>
+                        <p>No tienes que registrarte para probar el editor web.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta">
+            <div class="container">
+                <h2>¿Quieres formar parte de nuestro equipo?</h2>
+                <p>Contacta con nosotros hoy</p>
+                <button class="btn1" id="open-modal2">
+                    Ver mas
+                </button>
+            </div>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const slides = document.getElementById('slides');
+                const slide = document.querySelectorAll('.slide');
+                let currentIndex = 0;
+    
+                function showNextSlide() {
+                    currentIndex++;
+                    if (currentIndex >= slide.length) {
+                        currentIndex = 0;
+                    }
+                    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+                setInterval(showNextSlide, 3000);
+                /*=============== SHOW MODAL ===============*/
+const showModal = (openButton, modalContent,OpenButton) =>{
+    const openBtn = document.getElementById(openButton),
+    modalContainer = document.getElementById(modalContent),
+    OpenBtn = document.getElementById(OpenButton)
+    
+    if(openBtn && modalContainer){
+        openBtn.addEventListener('click', ()=>{
+            modalContainer.classList.add('show-modal')
+        })
+    }
+    if(OpenBtn && modalContainer){
+        OpenBtn.addEventListener('click', ()=>{
+            modalContainer.classList.add('show-modal')
+        })
+    }
+}
+showModal('open-modal','modal-container', 'open-modal2')
+
+/*=============== CLOSE MODAL ===============*/
+const closeBtn = document.querySelectorAll('.close-modal')
+
+function closeModal(){
+    const modalContainer = document.getElementById('modal-container')
+    modalContainer.classList.remove('show-modal')
+}
+closeBtn.forEach(c => c.addEventListener('click', closeModal))
+            });
+
+        </script>
+        <style>
+
+            :root{
+                --color-principal: #07e;
+                --color-secundario: #6a0dad;
+            }
+
+            body {
+                font-family: 'Arial', sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background-color: #fff;
+                color: #333;
+            }
+    
+            header {
+                background: linear-gradient(to right, var(--color-principal), var(--color-secundario)); /* Degradado de azul a púrpura */
+                color: #fff;
+                padding: 2em 0;
+                text-align: center;
+            }
+    
+            header h1 {
+                margin: 0;
+                font-size: 2.5em;
+                font-weight: bold;
+            }
+            .hero h2 {
+                font-size: 2em;
+            }
+    
+            .hero p {
+                margin: 0.5em 0 1.5em;
+                font-size: 1.2em;
+            }
+    
+            .container {
+                width: 80%;
+                margin: auto;
+            }
+            .containerr {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+            }
+    
+            .slider {
+                margin: 2em 0;
+                overflow: hidden;
+                position: relative;
+            }
+    
+            .slides {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+    
+            .slide {
+                min-width: 100%;
+                box-sizing: border-box;
+            }
+    
+            .slide img {
+                width: 100%;
+                display: block;
+            }
+    
+            .content {
+                padding: 2em 0;
+                text-align: center;
+            }
+    
+            .content h2 {
+                margin-bottom: 1em;
+                font-size: 2em;
+            }
+    
+            .benefits {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+    
+            .benefit-card {
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                width: 30%;
+                text-align: center;
+                padding: 1em;
+                transition: transform 0.3s ease;
+            }
+    
+            .benefit-card:hover {
+                transform: scale(1.05);
+            }
+    
+            .benefit-card img {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 1em;
+            }
+    
+            .benefit-card h3 {
+                margin: 0;
+                font-size: 1.5em;
+            }
+    
+            .benefit-card p {
+                margin: 0.5em 0 0;
+            }
+    
+            .cta {
+                background: linear-gradient(to right, #0073e6, #6a0dad); /* Degradado de azul a púrpura */
+                color: #fff;
+                padding: 2em 0;
+                text-align: center;
+            }
+    
+            .cta h2 {
+                margin-bottom: 1em;
+                font-size: 2.5em;
+            }
+    
+            .cta p {
+                margin-bottom: 1em;
+            }
+    
+            .cta .btn {
+                background: #ff9900;
+                color: #fff;
+                padding: 0.7em 2em;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 1.2em;
+            }
+
+            .flex-container{
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+            }
+    
+            .cta .btn:hover {
+                background: #cc7a00;
+            }
+    
+    
+            @media (max-width: 768px) {
+                .benefit-card {
+                    width: 45%;
+                }
+            }
+    
+            @media (max-width: 480px) {
+                .benefit-card {
+                    width: 100%;
+                }
+            }
+    
+            .btn1 {
+                background: #ff9900;
+                color: #fff;
+                padding: 0.7em 2em;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 1.2em;
+            }
+
+            /*Ventana modal */
+            
+
+
+body{
+  background-color: white;
+  position:relative;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+
+
+/*=============== MODAL ===============*/
+
+
+
+.modal__container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #b9b9b991;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  overflow: hidden;
+  align-items: flex-end;
+  transition: all .3s;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+
+  /*=== Effect 3 ===*/
+  /* perspective: 1000px; */
+}
+
+.modal__content{
+  position: relative;
+  background-color: white;
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  border-radius: 1rem 1rem 0 0;
+  transition: all .3s;
+
+  /*=== Effect 1 ===*/
+  transform: translateY(10%);
+
+  /*=== Effect 2 ===*/
+  /* transform: scale(.5) translateY(10%); */
+
+  /*=== Effect 3 ===*/
+  /* transform: rotateX(65deg) scale(.75) translateY(10%);
+  transform-origin: 50% 100%; */
+}
+
+.modal__img{
+  width: 150px;
+  margin-bottom: .75rem;
+}
+
+.modal__close{
+  display: inline-flex;
+  background-color: black;
+  border-radius: .25rem;
+  color: #FFF;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.modal__title{
+  color: black;
+  font-weight: 500;
+}
+
+.modal__description{
+  margin-bottom: 1.5rem;
+  color: black;
+}
+
+
+
+.modal__button-link{
+  display: block;
+  margin: 1rem auto 0;
+  background-color: #ccc;
+  padding: 1rem 1.3rem;
+  color:black;
+  border-radius: 1em;
+}
+
+/* Show modal */
+.show-modal{
+  visibility: visible;
+  opacity: 1;
+}
+
+.show-modal .modal__content{
+  /*=== Effect 1 ===*/
+  transform: translateY(0);
+
+  /*=== Effect 2 ===*/
+  /* transform: scale(1) translateY(0); */
+
+  /*=== Effect 3 ===*/
+  /* transform: rotateX(0) scale(1) translateY(0); */
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (min-width: 576px){
+  .modal__content{
+    margin: auto;
+    width: 380px;
+    border-radius: 1.25rem;
+  }
+  .modal__img{
+    width: 170px;
+  }
+}
+        </style>
+    </body>
+</Layout>

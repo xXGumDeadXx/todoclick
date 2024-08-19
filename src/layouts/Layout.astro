@@ -16,7 +16,7 @@ const { title } = Astro.props;
 <head>
     <meta charset="UTF-8" />
     <meta name="title" content="Todoklick">
-    <meta name="description" content="Astro description" />
+    <meta name="description" content="TodoKlick te simplifica la vida. Contamos con una red de profesionales listos para ayudarte las 24 horas del día en lo que necesites. ¡Conócenos y descubre cómo hacemos tu día a día más fácil y eficiente!" />
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#49b" />
     <link rel="icon" type="image/svg+xml" href="/logo/todoklick.png" />
@@ -30,7 +30,7 @@ const { title } = Astro.props;
                 <a href="/">
                     <img src="/logo/todoklick.png" alt="icono todoclick" class="nav__icon">
                 </a>
-                <h2 class="nav__title">Todoklick</h2>
+                <h2 class="nav__title" id="title">Todoklick</h2>
             </div>
             <form class="nav__center">
                 <input type="text" class="nav__search" placeholder="Buscar...">
@@ -51,8 +51,7 @@ const { title } = Astro.props;
             <ul class="nav__list" id="nav-list">
                 <li class="nav__item"><a href="/">Inicio</a></li>
                 <li class="nav__item"><a href="/categoria">Servicios</a></li>
-                <li class="nav__item"><a href="#">Contacto</a></li>
-                <li class="nav__item"><a href="#">Ofertas</a></li>
+                <li class="nav__item"><a href="/aboutUs">Contacto</a></li>
                 <li class="nav__item"><a href="#">Publicas</a></li>
             </ul>
             <div class="nav__overlay" id="nav-overlay"></div>
@@ -134,11 +133,15 @@ const { title } = Astro.props;
     --color-principal: #235;
     --color-secundario: #49b;
 }
-
+body{
+    background-color: #5f8ea51a
+}
 .header {
     margin-bottom: 60px;
 }
-
+.disable{
+    display:none
+}
 .header__nav {
     width: 100%;
     height: 60px;
@@ -351,6 +354,7 @@ const { title } = Astro.props;
         padding-left: 10px;
         padding-right: 50px;
         max-width: 80%;
+        border-radius: 5px;
     }
 
     .nav__search.active {
