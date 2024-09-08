@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro'
 <Layout title='Salud'>
 <main>
         <section class="hero">
-            <img src="/servicios/Servicio-medicina.png" alt="Medicina-20240703-194003-0000" class="hero-image">
+            <img src="/subcategoria/medicina.png" alt="Medicina-20240703-194003-0000" class="hero-image">
         </section>
         <!-- Categorías Section -->
         <section class="categories">
@@ -42,39 +42,33 @@ import Layout from '../../layouts/Layout.astro'
     text-align: center;
     margin-top: 60px;
 }
-
-.hero img {
-    width: 50%;
-
+.hero img{
+    width: 60%;
 }
 
 
     /* Categories Section */
 .categories {
-    padding: 3rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-    margin: auto;
-    gap: 7rem ;
+    display: grid;
+    width: 60%;
+    margin: 3rem auto;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
 }
 
 .category {
     background-color: transparent;
     border-radius: 10px;
     text-align: center;
-    flex: 1;
-    box-shadow: 0 0 10px 0 #00000036;
     min-width: 200px;
+    height: 150px;
     max-width: 300px;
-    transition: transform 0.3s ease-in-out;
-    align-items: center;
     display: flex;
+    box-shadow: 0 0 10px 0 #00000036;
+    transition: transform 0.3s ease-in-out;
     flex-direction: column;
-    gap:0.5rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .category:hover {
@@ -97,6 +91,18 @@ import Layout from '../../layouts/Layout.astro'
     }
     .categories{
         gap:4rem ;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media(max-width: 1200px){
+    .categories{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width: 600px){
+    .categories{
+        grid-template-columns: repeat(1,1fr);
     }
 }
 </style>

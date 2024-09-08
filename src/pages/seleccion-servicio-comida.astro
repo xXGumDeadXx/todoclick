@@ -5,11 +5,11 @@ import '../styles/StylesGlobal.css'
 import CardInfo from '../components/card-info.astro'
 ---
 
-<Layout title='Servicio'>
+<Layout title='Servicio-restaurante'>
     <div id="main-content">
         <main>
             <section class="hero">
-                <img src="https://i.ibb.co/XpXsfJW/IMG-20240609-WA0019.jpg" alt="El solar de rosa" class="hero-image">
+                <img src="/subcategoria/comida.png" alt="El solar de rosa" class="hero-image">
             </section>
             <!-- Content Section -->
             <section class="profiles">
@@ -21,13 +21,25 @@ import CardInfo from '../components/card-info.astro'
                 profesion="Restaurante"
                 src="/cliente/ElSolar/LogoSolar.png" />
 
-                <CardInfo/>
+                <CardInfo 
+                title="¿Te gustaría que tu emprendimiento aparezca en nuestra página web?" 
+                descrip="Si buscas una forma eficaz de promover tu negocio, nos especializamos en ofrecer servicios que ayudan a emprendedores como tu, a publicar y promocionar sus proyectos en nuestra plataforma."/>
                 <!-- Repeat similar profile blocks as needed -->
             </section>
         </main>
 
 </Layout>
 <style>
+.hero {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero img{
+    width: 80%;
+}
 
 .profiles {
     display: flex;
@@ -47,5 +59,11 @@ import CardInfo from '../components/card-info.astro'
     .profile {
         max-width: 90%;
     }
+    
+    .hero img{
+        width: 100%;
+    }
+
+
 }
 </style>

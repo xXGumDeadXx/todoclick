@@ -1,15 +1,15 @@
 ---
-
+const {title, descrip} = Astro.props
 ---
 
 
 <div class="profile">
     <img src="/logo/todoklick-oscuro.png" alt="Logo" class="logo-image">
     <div class="profile-info">
-        <h3>¿Te gustaría que tu emprendimiento aparezca en nuestra página web?</h3>
-        <p class="profile-description">Si buscas una forma eficaz de promover tu negocio, nos especializamos en ofrecer servicios que ayudan a emprendedores como tu, a publicar y promocionar sus proyectos en nuestra plataforma.</p>
+        <h3>{title}</h3>
+        <p class="profile-description">{descrip}</p>
     </div> 
-    <a href="#" class="Btn">
+    <a href="/publica" class="Btn">
         Mas informacion
     </a>
 </div>

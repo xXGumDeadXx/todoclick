@@ -2,15 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/card-servicio.astro'
 import '../styles/StylesGlobal.css'
+
+import CardInfo from '../components/card-info.astro'
 ---
 
-<Layout title='Servicio-comida'>
+<Layout title='Servicio-Estetica'>
     <div id="main-content">
         <main>
             <section class="hero">
-                <img src="https://i.ibb.co/XpXsfJW/IMG-20240609-WA0019.jpg" alt="El solar de rosa" class="hero-image">
+                <img src="/subcategoria/estetica.png" alt="El solar de rosa" class="hero-image">
             </section>
             <!-- Content Section -->
+
             <section class="profiles">
                 <!--Obligatorio los atributos -->
                 <Card 
@@ -20,13 +23,26 @@ import '../styles/StylesGlobal.css'
                 profesion="Paluqueria"
                 src="https://i.ibb.co/5KQJz0D/IMG-20240627-152420.jpg" />
 
+                <CardInfo 
+                title="¿Te gustaría que tu emprendimiento aparezca en nuestra página web?" 
+                descrip="Si buscas una forma eficaz de promover tu negocio, nos especializamos en ofrecer servicios que ayudan a emprendedores como tu, a publicar y promocionar sus proyectos en nuestra plataforma."/>
                 <!-- Repeat similar profile blocks as needed -->
             </section>
         </main>
 
 </Layout>
 <style>
+.hero {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 60px;
+}
 
+.hero img {
+    width: 80%;
+
+}
 .profiles {
     display: flex;
     flex-wrap: wrap;
@@ -44,6 +60,9 @@ import '../styles/StylesGlobal.css'
 
     .profile {
         max-width: 90%;
+    }
+    .hero img{
+        width: 100%;
     }
 }
 </style>

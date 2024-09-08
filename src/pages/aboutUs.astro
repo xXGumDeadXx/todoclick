@@ -6,6 +6,7 @@ import CardTeam from "../components/card-team.astro";
 <Layout title="Sobre nosotros">
     <div id="main-content">
         <main>
+            <body>
             <!-- Te voy a comentar todo pa que no te pierdas cabezon -->
     <!-- Header -->
     <header class="hero">
@@ -17,14 +18,35 @@ import CardTeam from "../components/card-team.astro";
     </header>
 
     <!-- Main -->
-    <main>
-        <body>
             <!-- Aquí irían las otras secciones de tu página -->
-            <header>
-                <h1>Sobre nosotros</h1>
-                <p>La mentalidad «Día 1» de Amazon es una cultura y un modelo operativo que pone a nuestros clientes en el centro de todo lo que hacemos, y nos lleva a actuar siempre con la misma energía y espíritu innovador del primer día.</p>
-                <button class="sign-up">publica/contactanos</button>
-            </header>
+
+            <section class="modal containerr">
+
+                <dialog class="modal__container" id="modal-container">
+                    <div class="modal__content">
+                        <div class="modal__close close-modal" title="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                              </svg>
+                        </div>
+    
+                        <img src="/logo/todoklick-oscuro.png" alt="" class="modal__img">
+    
+                        <h1 class="modal__title">Contactanos!</h1>
+                        <p class="modal__description">AQui va algo tenso</p>
+                        <div class="flex-container">
+                            <div>
+                                <h4>Whatsapp</h4>
+                                <p>+54 424-254.5478</p>
+                            </div>
+                            <div>
+                                <h4>Correo</h4>
+                                <p>Todoklick@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </dialog>
+            </section>
         
             <section class="about-us">
                 <img src="https://i.ibb.co/qJ1hcJp/descarga.webp" alt="Team working">
@@ -62,79 +84,82 @@ import CardTeam from "../components/card-team.astro";
                         <p>correo kajksjakjsa</p>
                         <a href="" class="link">CV</a>
                     </CardTeam>
+                
                 </div>
             </section>
         
-            <!-- Nueva Sección: News -->
-            <section class="news">
-                <h2>News</h2>
-                <div class="news-items">
-                    <div class="news-item">
-                        <img src="https://i.ibb.co/J2W71H8/live-reportage-conceptual-logo-created-vector-27040952.jpg" alt="News 1">
-                        <div class="news-content">
-                            <h3>Nuevas funciones</h3>
-                            <p>Implementamos un slider un nav y un footer con animaciones hermosas</p>
+        <section class="publica">
+            <section class="content">
+                <div class="container">
+                    <h2>¿Por qué Publicar con Nosotros?</h2>
+                    <div class="benefits">
+                        <div class="benefit-card">
+                            <img src="https://i.ibb.co/zn17JZM/IMG-20240621-WA0101.jpg" alt="Alcance Global">
+                            <h3>Alcance Global</h3>
+                            <p>Llega a una audiencia nacional con facilidad.</p>
                         </div>
-                    </div>
-                    <div class="news-item">
-                        <img src="https://i.ibb.co/J2W71H8/live-reportage-conceptual-logo-created-vector-27040952.jpg" alt="News 2">
-                        <div class="news-content">
-                            <h3>Personal Despedido</h3>
-                            <p>Despidieron a Ricardo por no trabajar y solo estar jugando blox fruit</p>
+                        <div class="benefit-card">
+                            <img src="https://i.ibb.co/VCGsgMN/IMG-20240621-WA0111.jpg" alt="Tecnología de Punta">
+                            <h3>Tecnología de Punta</h3>
+                            <p>Utilizamos las últimas tecnologías para maximizar tu impacto.</p>
                         </div>
-                    </div>
-                    <div class="news-item">
-                        <img src="https://i.ibb.co/J2W71H8/live-reportage-conceptual-logo-created-vector-27040952.jpg" alt="News 3">
-                        <div class="news-content">
-                            <h3>Lanzamiento</h3>
-                            <p>El lanzamiento de la pagina esta en proceso, saldra cuando salga silksong</p>
+                        <div class="benefit-card">
+                            <img src="https://i.ibb.co/jfLZ4Q4/IMG-20240621-WA0105.jpg" alt="Crecimiento">
+                            <h3>Crecimiento</h3>
+                            <p>Haz que tu marca crezca con nosotros.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <img src="https://i.ibb.co/2P5kWG2/IMG-20240621-WA0106.jpg" alt="Optimización para móviles">
+                            <h3>Optimización para móviles</h3>
+                            <p>Tu sitio web estará adaptado y optimizado para una experiencia de navegación perfecta.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <img src="https://i.ibb.co/SXM5dF0/IMG-20240621-WA0110.jpg" alt="Gratis y sin registro">
+                            <h3>Gratis y sin registro</h3>
+                            <p>No tienes que registrarte para probar el editor web.</p>
                         </div>
                     </div>
                 </div>
             </section>
-        
-            <!-- Sección de Contacto -->
-            <section class="contact">
-                <h2>Quieres saber como contactarnos?</h2>
-                <button>Ver mas</button>
-            </section>
+
+            <h2>Desas unirte a nuestro equipo?</h2>
+            <p class="parrafo">Es tan facil como dar un click y contactarnos!</p>
+            <button id="open-modal" class="boton">HAZ CLICK AQUI</button>
+        </section>
         
         </body>
-        
-        <!-- Seccion del Dream Team -->
-        <section class="team">
-            <h2>Nuestro Equipo</h2>
-            <div class="team-members">
-                <CardTeam src="https://i.ibb.co/0VXjnty/IMG-20240626-WA0029.jpg" nombre="Angel Linarez" job="Programador">
-                    <p>angeljlinarez@gmail.com</p>
-                    <p>correo kajksjakjsa</p>
-                    <a href="" class="link">CV</a>
-                </CardTeam>
-            </div>
-        </section>
 
-        <!-- La imagen que puso Michele de una officina xd -->
-        <section class="office">
-            <img src="https://i.ibb.co/0VXjnty/IMG-20240626-WA0029.jpg" alt="Office Image">
-        </section>
     </main>
-
-    <!-- Footer(esto no va en el footer pero tu entiendes xd) -->
-    <footer>
-        <div class="contact">
-            <h3>Contacto</h3>
-            <p>Michele</p>
-            <p>Dirección: Michele Piñuela, Acarigua portuguesa</p>
-            <p>Tel: +34 971 302 684</p>
-            <p>Email: Todoklick@gmail.com</p>
-        </div>
-        <div class="map">
-            <!-- El frame hay que poner uno que concuerde con la casa de alguien -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.8941177623486!2d1.4480957153700513!3d38.906256979571235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1299482a67a72385%3A0x9a92ec9b8b06ff9!2sMarina%20Botafoch%2C%2007800%20Ibiza%2C%20Illes%20Balears%2C%20Spain!5e0!3m2!1sen!2s!4v1622711096691!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-
-        </main>
 </Layout>
+    <script>
+    /*=============== SHOW MODAL ===============*/
+        const showModal = (openButton, modalContent,OpenButton) =>{
+            const openBtn = document.getElementById(openButton),
+            modalContainer = document.getElementById(modalContent),
+            OpenBtn = document.getElementById(OpenButton)
+            
+            if(openBtn && modalContainer){
+                openBtn.addEventListener('click', ()=>{
+                    modalContainer.classList.add('show-modal')
+                })
+            }
+            if(OpenBtn && modalContainer){
+                OpenBtn.addEventListener('click', ()=>{
+                    modalContainer.classList.add('show-modal')
+                })
+            }
+        }
+        showModal('open-modal','modal-container', 'open-modal2')
+
+        /*=============== CLOSE MODAL ===============*/
+        const closeBtn = document.querySelectorAll('.close-modal')
+
+        function closeModal(){
+            const modalContainer = document.getElementById('modal-container')
+            modalContainer.classList.remove('show-modal')
+        }
+        closeBtn.forEach(c => c.addEventListener('click', closeModal))
+</script>
 
 <style>
   body {
@@ -159,6 +184,13 @@ import CardTeam from "../components/card-team.astro";
             margin: 0 auto;
             padding: 0 20px;
         }
+        .publica h2 {
+            color: white;
+            font-size: 2rem;
+        }
+        .publica .parrafo{
+            color: white;
+        }
 
         /* Estilos del Header */
         .hero {
@@ -181,6 +213,9 @@ import CardTeam from "../components/card-team.astro";
             padding: 0 20px;
         }
 
+        .publica{
+            background-color: #07e;
+        }
         .hero-text h1 {
             font-size: 3em;
             margin: 0;
@@ -232,11 +267,63 @@ import CardTeam from "../components/card-team.astro";
         .contact p, .contact h3 {
             margin: 5px 0;
         }
-
-        .map iframe {
-            width: 100%;
-            height: 300px;
-        }
+            .container {
+                width: 80%;
+                margin: auto;
+            }
+           
+            @media (max-width: 768px) {
+                .benefit-card {
+                    width: 45%;
+                }
+            }
+    
+            .content {
+                padding: 2em 0;
+                text-align: center;
+            }
+    
+            .content h2 {
+                margin-bottom: 1em;
+                font-size: 2em;
+            }
+    
+            .benefits {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+    
+            .benefit-card {
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                width: 300px;
+                text-align: center;
+                padding: 1em;
+                transition: transform 0.3s ease;
+            }
+    
+            .benefit-card:hover {
+                transform: scale(1.05);
+            }
+    
+            .benefit-card img {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 1em;
+            }
+    
+            .benefit-card h3 {
+                margin: 0;
+                font-size: 1.5em;
+            }
+    
+            .benefit-card p {
+                margin: 0.5em 0 0;
+            }
 
         /* Media Queries */
         @media (max-width: 768px) {
@@ -271,38 +358,26 @@ import CardTeam from "../components/card-team.astro";
                 font-size: 1em;
             }
 
-            section {
-                padding: 20px 10px;
-            }
 
         }
 
-     header {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #f4f4f4;
-}
+ 
 
-header h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
 
-header p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-}
 
-.sign-up {
-    background-color: #5e4db2;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
+.boton{
+    padding: 1.2rem;
+    background-color: #f90;
+    border-radius: 1rem;
+    color: #f8f8f8;
+    transition: all .2s ease;
+    &:hover{
+        background-color: #d60;
+    }
+    &:active{
+        transform: scale(0.9);
+    }
 }
-
 .about-us {
     display: flex;
     flex-wrap: wrap;
@@ -357,119 +432,10 @@ header p {
     text-align: center;
 }
 
-.video-demo video {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 10px;
-}
 
-/* Estilos para la Sección de Nuestro Equipo */
-.our-team {
-    padding: 2rem 1rem;
-    background-color: #fff;
-    text-align: center;
-}
 
-.our-team h2 {
-    margin-bottom: 2rem;
-}
 
-.team-members {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items:center;
-}
 
-.member {
-    text-align: center;
-    width: 30%;
-    margin-bottom: 2rem;
-}
-
-.member img {
-    max-width: 100%;
-    border-radius: 40%;
-    margin-bottom: 1rem;
-}
-
-.member h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.member p {
-    font-size: 1rem;
-    color: #777;
-}
-
-/* Estilos para la Sección de Noticias (News) */
-.news {
-    padding: 2rem 1rem;
-    background-color: #333;
-    text-align: center;
-}
-
-.news h2 {
-    margin-bottom: 2rem;
-    color: white;
-}
-
-.news-items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.news-item {
-    background-color: #fff;
-    width: 30%;
-    margin-bottom: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.news-item img {
-    max-width: 100%;
-    height: auto;
-}
-
-.news-content {
-    padding: 1rem;
-}
-
-.news-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.news-content p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Estilos para la Sección de Contacto */
-.contact {
-    padding: 2rem 1rem;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-}
-
-.contact h2 {
-    margin-bottom: 1rem;
-}
-
-.contact button {
-    background-color: #5e4db2;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-}
 
 /* Media Queries para el diseño responsive */
 @media (max-width: 768px) {
@@ -492,10 +458,11 @@ header p {
 
     .team-members, .news-items {
         flex-direction: column;
+        align-items: center;
     }
 
     .team-members .member, .news-item {
-        width: 70%;
+        width: 60%;
     }
 }
 
@@ -506,5 +473,136 @@ header p {
 .item p {
     font-size: 14px;
     margin: 0;
+}
+
+
+
+body{
+  background-color: white;
+  position:relative;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+
+
+/*=============== MODAL ===============*/
+
+
+
+.modal__container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #b9b9b991;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  overflow: hidden;
+  align-items: flex-end;
+  transition: all .3s;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+
+  /*=== Effect 3 ===*/
+  /* perspective: 1000px; */
+}
+
+.modal__content{
+  position: relative;
+  background-color: white;
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  border-radius: 1rem 1rem 0 0;
+  transition: all .3s;
+
+  /*=== Effect 1 ===*/
+  transform: translateY(10%);
+
+  /*=== Effect 2 ===*/
+  /* transform: scale(.5) translateY(10%); */
+
+  /*=== Effect 3 ===*/
+  /* transform: rotateX(65deg) scale(.75) translateY(10%);
+  transform-origin: 50% 100%; */
+}
+
+.modal__img{
+  width: 150px;
+  margin-bottom: .75rem;
+}
+
+.modal__close{
+  display: inline-flex;
+  background-color: black;
+  border-radius: .25rem;
+  color: #FFF;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.modal__title{
+  color: black;
+  font-weight: 500;
+}
+
+.modal__description{
+  margin-bottom: 1.5rem;
+  color: black;
+}
+
+
+
+.modal__button-link{
+  display: block;
+  margin: 1rem auto 0;
+  background-color: #ccc;
+  padding: 1rem 1.3rem;
+  color:black;
+  border-radius: 1em;
+}
+
+/* Show modal */
+.show-modal{
+  visibility: visible;
+  opacity: 1;
+}
+
+.show-modal .modal__content{
+  /*=== Effect 1 ===*/
+  transform: translateY(0);
+
+  /*=== Effect 2 ===*/
+  /* transform: scale(1) translateY(0); */
+
+  /*=== Effect 3 ===*/
+  /* transform: rotateX(0) scale(1) translateY(0); */
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (min-width: 576px){
+  .modal__content{
+    margin: auto;
+    width: 380px;
+    border-radius: 1.25rem;
+  }
+
+  .modal__img{
+    width: 150px;
+  }
+}
+@media screen and (max-width: 576px){
+    .modal__container{
+        width: 92%;
+    }
 }
 </style>

@@ -2,9 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/card-servicio.astro'
 import '../styles/StylesGlobal.css'
+
+import CardInfo from '../components/card-info.astro'
 ---
 
-<Layout title='Servicio'>
+<Layout title='Servicio-odontologia'>
     <div id="main-content">
         <main>
             <section class="hero">
@@ -33,6 +35,10 @@ import '../styles/StylesGlobal.css'
                 descripcion="Soy la Dra. Mariangel Mogollón, una apasionada odontóloga con años de experiencia en cuidado bucal. Mi enfoque se basa en brindar tratamientos personalizados y de alta calidad para cada paciente. ¡Agenda tu cita hoy mismo!"
                 profesion="Odontólogo"
                 src="/cliente/od.mariangel/principal.jpg"  />
+
+                <CardInfo 
+                title="¿Te gustaría que tu emprendimiento aparezca en nuestra página web?" 
+                descrip="Si buscas una forma eficaz de promover tu negocio, nos especializamos en ofrecer servicios que ayudan a emprendedores como tu, a publicar y promocionar sus proyectos en nuestra plataforma."/>
                 <!-- Repeat similar profile blocks as needed -->
             </section>
         </main>

@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/card-servicio.astro'
+import '../styles/StylesGlobal.css'
+import CardInfo from '../components/card-info.astro'
+---
+
+<Layout title='Servicio-restaurante'>
+    <div id="main-content">
+        <main>
+            <section class="hero">
+                <img src="/subcategoria/Mecanica.png" alt="Mecanica" class="hero-image">
+            </section>
+            <!-- Content Section -->
+            <section class="profiles">
+                <!--Obligatorio los atributos -->
+
+                <CardInfo 
+                title="¿Te gustaría aprovechar este espacio sin competencia?" 
+                descrip="Esta sección de nuestra página web no cuenta con clientes actualmente, lo que representa una oportunidad única para ti, asegúrate de que tu emprendimiento sea el primero en ocupar este espacio, captando toda la atención de nuestros visitantes!"/>
+                <!-- Repeat similar profile blocks as needed -->
+            </section>
+        </main>
+
+</Layout>
+<style>
+.hero {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero img{
+    width: 80%;
+}
+
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profiles {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile {
+        max-width: 90%;
+    }
+    
+    .hero img{
+        width: 100%;
+    }
+
+
+}
+</style>

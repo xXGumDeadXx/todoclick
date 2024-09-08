@@ -11,27 +11,19 @@ import Hero from '../components/Hero.astro'
     <body>
     
         <!-- Banner Superior -->
-            <Hero>
-
-            </Hero>
-            
-
-    
+            <Hero/>
         <!-- Nuestras Opciones -->
         <section class="nuestras-opciones">
             <h2>Nuestras opciones</h2>
             <div class="opciones-container">
-                <a href="/categoria" class="opcion">
-                    <img src="/categoria.webp" alt="Outlet">
+                <a href="/sobre-nosotros" class="opcion" title="Categoria">
+                    <img src="/flayer-principal/categoria.webp" alt="Outlet">
                 </a>
-                <a href="" class="opcion">
-                    <img src="/1.webp" alt="">
+                <a href="/publica" class="opcion" title="">
+                    <img src="/flayer-principal/publica.webp" alt="">
                 </a>
-                <a href="" class="opcion">
-                    <video id="myVideo" src="Banner21.webm" autoplay loop ></video>
-                </a>
-                <a href="/aboutUs" class="opcion">
-                    <img src="/1.webp" alt="50% en la 2ª unidad">
+                <a href="/aboutUs" class="opcion" title="¿Quienes somos?">
+                    <img src="/flayer-principal/aboutUs.jpg" alt="¿Quienes somos?" >
                 </a>
             </div>
         </section>
@@ -41,13 +33,17 @@ import Hero from '../components/Hero.astro'
             <h2>Servicios destacados</h2>
             <div class="servicios-container">
                 <a href="./subcategoria/subcategoria-salud" class="servicio">
-                    <img src="/1.webp" alt="Novedades en restaurantes">
+                    <img src="/flayer-principal/1.webp" alt="Salud">
                 </a>
-                <a href="" class="servicio">
-                    <img src="/Mecanica.png" alt="Liquidaciones en hogar">
+                <a href="/seleccion-servicio-mecanica" class="servicio">
+                    <img src="/flayer-principal/2.webp" alt="Mecanica">
                 </a>
-                <a href="" class="servicio">
-                    <img src="/3.webp" alt="Campaña Exclusiva">
+                <a href="/seleccion-servicio-comida" class="servicio">
+                    <img src="/flayer-principal/3.webp" alt="Restaurantes">
+                    
+                </a >
+                <a href="/seleccion-servicio-estetica" class="servicio">
+                    <img src="/estetica.webp" alt="Estetica">
                     
                 </a >
             </div>
@@ -59,28 +55,28 @@ import Hero from '../components/Hero.astro'
             <div class="formas-container">
                 <article>
                     <div class="forma">
-                        <img src="https://i.ibb.co/YNH5xZr/IMG-20240621-WA0098.jpg" alt="Marca PH">
+                        <img src="/iconos/icono4.png" alt="Marca PH">
                     </div>
                         <h3>Marca TK.</h3>
                         <p>Servicios de calidad al mejor precio.</p>
                 </article>
                 <article>
                     <div class="forma">
-                        <img src="https://i.ibb.co/7WqPFmL/IMG-20240621-WA0097.jpg" alt="Promociones">
+                        <img src="/iconos/icono1.png" alt="Promociones">
                     </div>
                         <h3>Promociones</h3>
                         <p>Promociones mensuales.</p>
                 </article>
                 <article>
                     <div class="forma">
-                        <img src="https://i.ibb.co/tcmW6sX/IMG-20240621-WA0094.jpg" alt="Dto por cantidad">
+                        <img src="/iconos/icono3.png" alt="Dto por cantidad">
                     </div>
                         <h3>Servicios por cantidad.</h3>
                         <p>Ahorra con Servicios especiales.</p>
                 </article>
                 <article>
                     <div class="forma">
-                        <img src="https://i.ibb.co/qNBc8sd/IMG-20240621-WA0092.jpg" alt="¿Eres nuevo?">
+                        <img src="/iconos/icono2.png" alt="¿Eres nuevo?">
                     </div>
                         <h3>¿Eres nuevo?</h3>
                         <p>Envío gratis al unirte a nuestra newsletter.</p>
@@ -88,18 +84,6 @@ import Hero from '../components/Hero.astro'
             </div>
         </section>
         <script>
-            // const video = document.getElementById('myVideo');
-            
-           
-            // video.addEventListener('mouseenter', function() {
-            //     video.play();
-            // });
-
-            // video.addEventListener('mouseleave', function() {
-            //     video.pause();
-            //     video.currentTime = 0; // Opcional: Reinicia el video cuando se detiene
-            // });
-        
         </script>
         <style>
             /* Reset básico */
@@ -138,7 +122,11 @@ import Hero from '../components/Hero.astro'
             .nuestras-opciones h2, .servicios-destacados h2 {
                 font-size: 2.5rem;
                 color: #111;
-                margin: 2em 0 1em 0
+                margin: 2em 0 1em 0;
+                color: #9cca0b
+            }
+            .servicios-destacados h2{
+                color: #FCA311;
             }
     
             .formas-de-ahorrar h2 {
@@ -176,7 +164,6 @@ import Hero from '../components/Hero.astro'
                 display: flex;
                 gap: 2.5em;
                 justify-content: center;
-                flex-wrap: wrap;
             }
 
             /* Elementos de "Nuestras opciones" y "Servicios destacados" */
@@ -225,20 +212,19 @@ import Hero from '../components/Hero.astro'
 
     
             .forma {
-                background-color: #f6ebe5;
-                padding: 2rem;
+                background-color: white;
+                padding: 1.5rem;
                 border-radius: 8px;
                 box-shadow: 0 2px 5px rgba(0,0,0,0.3);
                 text-align: center;
             }
     
             .forma img {
-                width: 50%; /* Ajusta este valor si quieres las imágenes más grandes o pequeñas */
+                width: 80px; /* Ajusta este valor si quieres las imágenes más grandes o pequeñas */
                 border-radius: 8px;
                 margin-bottom: 10px;
                 display: block;
-                margin-left: auto;
-                margin-right: auto;
+                margin: auto;
             }
             video{
                 width: 100%;
@@ -253,8 +239,17 @@ import Hero from '../components/Hero.astro'
                     margin-left: 20px;
                 }
                 .opciones-container{
-                    flex-wrap: wrap;
+                    flex-direction: column;
+                    align-items: center;
                 }
+                
+                .servicios-container{
+                flex-wrap: wrap;
+            }
+
+            .opcion{
+                width: 100%;
+            }
             .formas-container {
                 grid-template-columns: repeat(1, 200px);
             }

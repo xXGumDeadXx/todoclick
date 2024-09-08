@@ -1,335 +1,400 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from '../layouts/Layout.astro';
 ---
 
-    
-<Layout title='Publica'>
-
-    <body>
-        <header>
-            <div class="container">
-                <div class="hero">
-                    <h1>Publica con Nosotros</h1>
-                    <h2>¿Quieres publicar tu página web?</h2>
-                    <p>Estamos aquí para ayudarte</p>
-                    <button class="btn1" id="open-modal">
-                        Ver mas
-                    </button>
-                    
-                </div>
-            </div>
-        </header>
-
-        <section class="modal containerr">
-
-            <div class="modal__container" id="modal-container">
-                <div class="modal__content">
-                    <div class="modal__close close-modal" title="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                          </svg>
-                    </div>
-
-                    <img src="/logo/todoklick-oscuro.png" alt="" class="modal__img">
-
-                    <h1 class="modal__title">Contactanos!</h1>
-                    <p class="modal__description">AQui va algo tenso</p>
-                    <div class="flex-container">
-                        <div>
-                            <h4>Whatsapp</h4>
-                            <p>+54 424-254.5478</p>
-                        </div>
-                        <div>
-                            <h4>Correo</h4>
-                            <p>Todoklick@gmail.com</p>
-                        </div>
-                    </div>
-                    <button class="modal__button-link close-modal">
-                        Close
-                    </button>
-                </div>
-            </div>
-        </section>
-        
-        <section class="slider">
-            <div class="containerr">
-                <div class="slides" id="slides">
-                    <div class="slide">
-                        <img src="https://i.ibb.co/6gmpZ9p/IMG-20240806-WA0008.jpg" alt="Slide 1">
-                    </div>
-                    <div class="slide">
-                        <img src="https://i.ibb.co/6gmpZ9p/IMG-20240806-WA0008.jpg" alt="Slide 2">
-                    </div>
-                    <div class="slide">
-                        <img src="https://i.ibb.co/6gmpZ9p/IMG-20240806-WA0008.jpg" alt="Slide 3">
+<Layout title='Publica con nosotros'>
+    <main>
+        <body>
+            <!--Section hero -->
+            <section class="hero">
+                <div class="hero_container">
+                    <img src="/publica/publica-banner.webp" alt="Publica con nosotros">
+                    <div class="info_hero">
+                        <h1>Publica con nosotros</h1>
+                        <h2>¿Quieres publicarte en todoklick?</h2>
+                        <p>Estamos aqui para ayudarte .</p>
+                        <button id="open-modal">Haz Click aqui!</button>
                     </div>
                 </div>
-            </div>
-        </section>
-        
-        <section class="content">
-            <div class="container">
-                <h2>¿Por qué Publicar con Nosotros?</h2>
-                <div class="benefits">
-                    <div class="benefit-card">
-                        <img src="https://i.ibb.co/zn17JZM/IMG-20240621-WA0101.jpg" alt="Alcance Global">
-                        <h3>Alcance Global</h3>
-                        <p>Llega a una audiencia nacional con facilidad.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <img src="https://i.ibb.co/VCGsgMN/IMG-20240621-WA0111.jpg" alt="Tecnología de Punta">
-                        <h3>Tecnología de Punta</h3>
-                        <p>Utilizamos las últimas tecnologías para maximizar tu impacto.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <img src="https://i.ibb.co/jfLZ4Q4/IMG-20240621-WA0105.jpg" alt="Crecimiento">
-                        <h3>Crecimiento</h3>
-                        <p>Haz que tu marca crezca con nosotros.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <img src="https://i.ibb.co/2P5kWG2/IMG-20240621-WA0106.jpg" alt="Optimización para móviles">
-                        <h3>Optimización para móviles</h3>
-                        <p>Tu sitio web estará adaptado y optimizado para una experiencia de navegación perfecta.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <img src="https://i.ibb.co/SXM5dF0/IMG-20240621-WA0110.jpg" alt="Gratis y sin registro">
-                        <h3>Gratis y sin registro</h3>
-                        <p>No tienes que registrarte para probar el editor web.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="cta">
-            <div class="container">
-                <h2>¿Quieres formar parte de nuestro equipo?</h2>
-                <p>Contacta con nosotros hoy</p>
-                <button class="btn1" id="open-modal2">
-                    Ver mas
-                </button>
-            </div>
-        </section>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const slides = document.getElementById('slides');
-                const slide = document.querySelectorAll('.slide');
-                let currentIndex = 0;
-    
-                function showNextSlide() {
-                    currentIndex++;
-                    if (currentIndex >= slide.length) {
-                        currentIndex = 0;
-                    }
-                    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-                }
-                setInterval(showNextSlide, 3000);
-                /*=============== SHOW MODAL ===============*/
-const showModal = (openButton, modalContent,OpenButton) =>{
-    const openBtn = document.getElementById(openButton),
-    modalContainer = document.getElementById(modalContent),
-    OpenBtn = document.getElementById(OpenButton)
-    
-    if(openBtn && modalContainer){
-        openBtn.addEventListener('click', ()=>{
-            modalContainer.classList.add('show-modal')
-        })
-    }
-    if(OpenBtn && modalContainer){
-        OpenBtn.addEventListener('click', ()=>{
-            modalContainer.classList.add('show-modal')
-        })
-    }
-}
-showModal('open-modal','modal-container', 'open-modal2')
-
-/*=============== CLOSE MODAL ===============*/
-const closeBtn = document.querySelectorAll('.close-modal')
-
-function closeModal(){
-    const modalContainer = document.getElementById('modal-container')
-    modalContainer.classList.remove('show-modal')
-}
-closeBtn.forEach(c => c.addEventListener('click', closeModal))
-            });
-
-        </script>
-        <style>
-
-            :root{
-                --color-principal: #07e;
-                --color-secundario: #6a0dad;
-            }
-
-            body {
-                font-family: 'Arial', sans-serif;
-                line-height: 1.6;
-                margin: 0;
-                padding: 0;
-                background-color: #fff;
-                color: #333;
-            }
-    
-            header {
-                background: linear-gradient(to right, var(--color-principal), var(--color-secundario)); /* Degradado de azul a púrpura */
-                color: #fff;
-                padding: 2em 0;
-                text-align: center;
-            }
-    
-            header h1 {
-                margin: 0;
-                font-size: 2.5em;
-                font-weight: bold;
-            }
-            .hero h2 {
-                font-size: 2em;
-            }
-    
-            .hero p {
-                margin: 0.5em 0 1.5em;
-                font-size: 1.2em;
-            }
-    
-            .container {
-                width: 80%;
-                margin: auto;
-            }
-            .containerr {
-                width: 80%;
-                margin: auto;
-                overflow: hidden;
-            }
-    
-            .slider {
-                margin: 2em 0;
-                overflow: hidden;
-                position: relative;
-            }
-    
-            .slides {
-                display: flex;
-                transition: transform 0.5s ease-in-out;
-            }
-    
-            .slide {
-                min-width: 100%;
-                box-sizing: border-box;
-            }
-    
-            .slide img {
-                width: 100%;
-                display: block;
-            }
-    
-            .content {
-                padding: 2em 0;
-                text-align: center;
-            }
-    
-            .content h2 {
-                margin-bottom: 1em;
-                font-size: 2em;
-            }
-    
-            .benefits {
-                display: flex;
-                justify-content: space-around;
-                flex-wrap: wrap;
-                gap: 20px;
-            }
-    
-            .benefit-card {
-                background: #fff;
-                border-radius: 8px;
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-                overflow: hidden;
-                width: 30%;
-                text-align: center;
-                padding: 1em;
-                transition: transform 0.3s ease;
-            }
-    
-            .benefit-card:hover {
-                transform: scale(1.05);
-            }
-    
-            .benefit-card img {
-                width: 50px;
-                height: 50px;
-                margin-bottom: 1em;
-            }
-    
-            .benefit-card h3 {
-                margin: 0;
-                font-size: 1.5em;
-            }
-    
-            .benefit-card p {
-                margin: 0.5em 0 0;
-            }
-    
-            .cta {
-                background: linear-gradient(to right, #0073e6, #6a0dad); /* Degradado de azul a púrpura */
-                color: #fff;
-                padding: 2em 0;
-                text-align: center;
-            }
-    
-            .cta h2 {
-                margin-bottom: 1em;
-                font-size: 2.5em;
-            }
-    
-            .cta p {
-                margin-bottom: 1em;
-            }
-    
-            .cta .btn {
-                background: #ff9900;
-                color: #fff;
-                padding: 0.7em 2em;
-                text-decoration: none;
-                border-radius: 5px;
-                font-size: 1.2em;
-            }
-
-            .flex-container{
-                display: flex;
-                gap: 1rem;
-                justify-content: center;
-            }
-    
-            .cta .btn:hover {
-                background: #cc7a00;
-            }
-    
-    
-            @media (max-width: 768px) {
-                .benefit-card {
-                    width: 45%;
-                }
-            }
-    
-            @media (max-width: 480px) {
-                .benefit-card {
-                    width: 100%;
-                }
-            }
-    
-            .btn1 {
-                background: #ff9900;
-                color: #fff;
-                padding: 0.7em 2em;
-                text-decoration: none;
-                border-radius: 5px;
-                font-size: 1.2em;
-            }
-
-            /*Ventana modal */
+            </section>
             
+            <!--Info principal -->
+            <section class="info">
+                <h2>Esto es lo que debes saber. </h2>
+                <p>Te contaremos la ventajas de publicar en todoklick!</p>
+                <div class="slider">
+                    <ul class="info_list">
+                        <li class="info_item">
+                            <div>1</div>
+                            <h4>Personalizacion.</h4>
+                            <p>Nuestros servicios y paginas web se adaptan a las necesidades específicas de cada cliente.</p>
+                        </li>
+                        <li class="info_item">
+                            <div>2</div>
+                            <h4>Experiencia.</h4>
+                            <p>Nuestros profesionales son expertos en sus campos.</p>
+                        </li>
+                        <li class="info_item">
+                            <div>3</div>
+                            <h4>Te guardamos la espalda.</h4>
+                            <p>Nuestra empresa garantiza la calidad y la satisfacción del cliente.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!--Section consejos -->
+            <section>
+                <h2>La clave del exito publicando.</h2>
+                <p>Cinco consejos que aseguran que tu publicación sea exitosa.</p>
+                <div class="consejos_wrapper">
+                    <button class="prev btn">‹</button> <!-- Botón anterior -->
+                    <ul class="consejos_container">
+                        <li class="consejos_item">
+                            <div>
+                                <h4>Conocemos tu audiencia.</h4>
+                                <p>Todoklick identifica las necesidades de los profesionales y clientes que buscan conectar a través de su plataforma. Esto les permite ofrecer contenido relevante y adaptado a cada perfil.</p>
+                            </div>
+                        </li>
+                        <li class="consejos_item">
+                            <div>
+                                <h4>Creamos contenido de calidad.</h4>
+                                <p>La plataforma de Todoklick ofrece perfiles detallados de los profesionales, reseñas de clientes y guías útiles para facilitar la búsqueda y contratación de servicios</p>
+                            </div>
+                        </li>
+                        <li class="consejos_item">
+                            <div>
+                                <h4>Somos constantes.</h4>
+                                <p>Todoklick actualiza constantemente su plataforma con nuevos perfiles y herramientas para mantener a sus usuarios informados y activos.</p>
+                            </div>
+                        </li>
+                        <li class="consejos_item">
+                            <div>
+                                <h4>Promocionamos tu contenido.</h4>
+                                <p>Utiliza diversas estrategias de marketing digital para atraer nuevos usuarios y promocionar los servicios de los profesionales registrados en su plataforma.</p>
+                            </div>
+                        </li>
+                        <li class="consejos_item">
+                            <div>
+                                <h4>Interactuamos con tu audiencia.</h4>
+                                <p>Fomenta la interacción entre profesionales y clientes a través de un sistema de mensajería interna y valoraciones.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="next btn">›</button> <!-- Botón siguiente -->
+                </div>
+            </section>
 
 
-body{
+            <!--Preguntas frecuentes -->
+            <section>
+                <h2>Preguntas frecuentes</h2>
+                <details class="question" id="details">
+                    <summary class="question_titulo">¿Qué garantías ofrece Todoklick?</summary>
+                    <p>Todoklick ofrece garantías sobre los productos que vende. Nuestra empresa garantiza la calidad de los servicios de nuestros profesionales y ofrecemos soporte post-venta para asegurarnos de que estés satisfecho con los resultados.</p>
+                </details>
+                
+                <details class="question" id="details">
+                    <summary class="question_titulo">¿Cómo puedo contactar a Todoklick para realizar una consulta?</summary>
+                    <p> Puedes contactar a Todoklick a través de nuestro sitio web o redes sociales. Si necesitas un servicio profesional, te invitamos a explorar nuestra plataforma y contactarnos directamente para recibir una cotización personalizada.</p>
+                </details>
+                <details class="question" id="details">
+                    <summary class="question_titulo">¿Qué diferencia a su empresa de otras plataformas de servicios profesionales?
+                    </summary>
+                    <p>Nos diferenciamos por nuestra enfoque personalizado, la calidad de nuestros profesionales y nuestra capacidad para conectar a nuestros clientes con las soluciones más adecuadas para sus necesidades.</p>
+                </details>
+                <details class="question" id="details">
+                    <summary class="question_titulo">¿Cómo garantizan la calidad de los servicios ofrecidos por los profesionales en su plataforma?</summary>
+                    <p>Contamos con un riguroso proceso de selección para asegurar que nuestros profesionales cumplan con los más altos estándares de calidad. Además, solicitamos feedback a nuestros clientes para evaluar la calidad de los servicios y mejorar continuamente.</p>
+                </details>
+                <details class="question" id="details">
+                    <summary class="question_titulo">¿Qué tipos de servicios ofrecen?</summary>
+                    <p>Ofrecemos una amplia gama de servicios profesionales, desde  Odontología hasta desarrollo web y mecánica automotriz. Entre otros.
+                    </p>
+                </details>
+                <details class="question" id="details">
+                    <summary class="question_titulo">¿Qué tipo de servicios puedo publicar?</summary>
+                    <p>Puedes publicar cualquier tipo de servicio profesional que ofrezcas, desde diseño gráfico y desarrollo web hasta medicina y gourmet.</p>
+                </details>
+                <details class="question" id="details">
+                    <summary class="question_titulo">¿Cuánto cuesta publicar mis servicios?</summary>
+                    <p>Ofrecemos diferentes planes de suscripción que se adaptan a tus necesidades y presupuesto. Puedes elegir el plan que mejor se ajuste a la cantidad de servicios que deseas publicar y al alcance que deseas obtener.</p>
+                </details>
+                <details class="question" id="details">
+                    <summary class="question_titulo"> ¿Cómo se calcula el pago por los servicios contratados a través de la plataforma?</summary>
+                    <p>El pago por los servicios contratados se realiza de forma segura a través de uno de nuestros promotores. Y elegir la forma de pago que prefieras.</p>
+                </details>
+                <details class="question" id="details">
+                    <summary class="question_titulo"> ¿Qué pasos debo seguir para publicar mis servicios en la plataforma?</summary>
+                    <p>El proceso es sencillo. Solo necesitas contactarte a través de nuestros números telefónicos o  nuestras redes sociales que están en nuestra plataforma, completamos tu perfil profesional, describes los servicios que ofreces y nuestro equipo creará tu perfil y lo activará en poco tiempo.</p>
+                </details>
+                <details class="question" id="details">
+                    <summary class="question_titulo"> ¿Cómo puedo asegurarme de que mi perfil sea visto por los clientes potenciales?</summary>
+                    <p>Para aumentar la visibilidad de tu perfil, optimizamos tu perfil con palabras clave relevantes, subimos ejemplos de tu trabajo. Además, puedes destacar tus servicios a través de nuestros planes de promoción.</p>
+                </details>
+                <details class="question" id="details">
+                    <summary class="question_titulo"> ¿Cómo puedo gestionar las solicitudes de los clientes?</summary>
+                    <p>Te contactaremos cada que un cliente requiera tus servicios. Podrás gestionar las solicitudes directamente con nosotros y de manera personalizada, donde podrás enviar cotizaciones, programar reuniones y comunicarte con los clientes.</p>
+                </details>
+                <details class="question" id="details">
+                    <summary class="question_titulo"> ¿Qué garantías me ofrece la plataforma?</summary>
+                    <p>Nuestra plataforma te ofrece una serie de herramientas para ayudarte a gestionar tus proyectos de manera eficiente y segura. Además, contamos con un equipo de soporte técnico disponible para ayudarte en todo momento.</p>
+                </details>
+                <details class="question" id="details">
+                    <summary class="question_titulo"> ¿Cómo puedo darme de baja de la plataforma?</summary>
+                    <p>Puedes darte de baja de la plataforma en cualquier momento contactando a cualquiera de nuestros promotores.</p>
+                </details>
+
+
+                <!--repetir tantas veces como sea necesario-->
+            </section>
+
+            <!--Ventana modal -->
+
+            <section class="public_container">
+                <div class="public">
+                    <img src="/publica/publica-footer.webp" alt="Publica con nosotros">
+                </div>
+                <div class="modal__container" id="modal-container">
+                    <div class="modal__content">
+                        <div class="modal__close close-modal" title="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                              </svg>
+                        </div>
+    
+                        <img src="/logo/todoklick-oscuro.png" alt="" class="modal__img">
+    
+                        <h1 class="modal__title">Contactanos!</h1>
+                        <p class="modal__description">AQui va algo tenso</p>
+                        <div class="flex-container">
+                            <div>
+                                <h4>Whatsapp</h4>
+                                <p>+54 424-254.5478</p>
+                            </div>
+                            <div>
+                                <h4>Correo</h4>
+                                <p>Todoklick@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </di>
+            </section>
+        </body>
+    </main>
+</Layout>
+
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    main{
+        width: 80%;
+        margin: auto;
+    }
+
+    section{
+        margin: 4em 0;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+
+    h2{
+        margin:20px 0;
+    }
+    h4{
+        font-size: 20px;
+        margin: 10px 0;
+        text-wrap: pretty;
+    }
+    /*Hero section*/
+    .hero{
+        text-align: center;
+    }
+
+    .hero_container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .info_hero{
+        position: absolute;
+    }
+
+    .info_hero{
+        font-size: 1.2rem;
+        color: white;
+        width: 80%;
+    }
+
+    .info_hero button{
+        padding: 1.1rem 1.2rem;
+        border-radius: 20px;
+        background-color: #fca311;
+        color: white;
+    }
+
+    /*Section info*/
+    .info h2, p{
+        margin: 20px 0;
+    }
+
+    .info_list{
+        display: flex;
+        overflow-x: hidden;
+        position: relative;
+        transition: transform 0.5s ease-in-out;
+        justify-content: space-around;
+
+
+    }
+
+
+
+    .info_item{
+        width: 350px;
+        height: auto;
+        padding: 1.5rem;
+        min-width: 200px;
+}
+
+    .info_item>div{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgba(128, 128, 128, 0.192);
+        text-align: center;
+        line-height: 30px;
+    }
+
+    /*Consejos section*/
+
+    .consejos_wrapper {
+    position: relative;
+}
+
+.consejos_container {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.consejos_item {
+    min-width: 495px;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.consejos_item:nth-child(1n+1) {
+    background-color: rgba(255, 0, 0, 0.178);
+}
+
+.consejos_item:nth-child(2n+1) {
+    background-color: rgba(0, 0, 255, 0.178);
+}
+
+.consejos_item:nth-child(3n+1) {
+    background-color: rgba(0, 255, 255, 0.199);
+}
+
+.consejos_item:nth-child(4n+1) {
+    background-color: rgba(238, 255, 0, 0.199);
+}
+
+.btn {
+    background-color: #33333346;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Alineación vertical al 50% */
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.prev {
+    left: -20px; 
+}
+
+.next {
+    right: -20px; 
+}
+
+    /*Preguntas frecuentes*/
+
+    .question{
+        background-color: transparent;
+        border-bottom: 1px solid #ccc;
+
+        &[open] >.question_titulo{
+            background-color: #cccccc41;
+        }
+        &:hover .question_titulo{
+            background-color: #cccccc41;
+        }
+    }
+
+
+    .question_titulo{
+        padding: 20px 0;
+    }
+
+
+    /*public section*/
+    .public img{
+        width: 100%;
+    }
+
+
+
+    /*responsive*/
+    @media(max-width: 800px){
+        main{
+            width: 90%;
+            
+        }
+        .info_list{
+            overflow-x: scroll;
+        }
+
+        .consejos_container{
+            overflow-x: scroll;
+        }
+
+        .consejos_item{
+            min-width: 310px;
+        }
+
+        .btn{
+            display: none;
+        }
+
+        .info_hero{
+        font-size: .5rem;
+    }
+
+    }
+
+    body{
   background-color: white;
   position:relative;
 }
@@ -385,7 +450,7 @@ button{
 }
 
 .modal__img{
-  width: 150px;
+  width: 100px;
   margin-bottom: .75rem;
 }
 
@@ -444,13 +509,81 @@ button{
 @media screen and (min-width: 576px){
   .modal__content{
     margin: auto;
-    width: 380px;
+    width: 389px;
     border-radius: 1.25rem;
   }
   .modal__img{
     width: 170px;
   }
 }
-        </style>
-    </body>
-</Layout>
+</style>
+<script>
+
+//Mover slider
+
+const sliderContainer = document.querySelector('.consejos_container');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+nextButton.addEventListener('click', () => {
+    sliderContainer.scrollBy({
+        left: 510,
+        behavior: 'smooth'
+    });
+});
+
+prevButton.addEventListener('click', () => {
+    sliderContainer.scrollBy({
+        left: -510,
+        behavior: 'smooth'
+    });
+});
+
+
+
+//remover atributo open de todos los details
+document.addEventListener('click', (e)=>{
+    const question = document.querySelectorAll('.question');
+    
+    question.forEach(i =>{
+        const isClickDetail = i.contains(e.target);
+
+
+        if(!isClickDetail ){ 
+            i.removeAttribute('open');
+        }
+        
+    })
+    
+
+})
+
+ /*=============== SHOW MODAL ===============*/
+ const showModal = (openButton, modalContent,OpenButton) =>{
+            const openBtn = document.getElementById(openButton),
+            modalContainer = document.getElementById(modalContent),
+            OpenBtn = document.getElementById(OpenButton)
+            
+            if(openBtn && modalContainer){
+                openBtn.addEventListener('click', ()=>{
+                    modalContainer.classList.add('show-modal')
+                })
+            }
+            if(OpenBtn && modalContainer){
+                OpenBtn.addEventListener('click', ()=>{
+                    modalContainer.classList.add('show-modal')
+                })
+            }
+        }
+        showModal('open-modal','modal-container', 'open-modal2')
+
+        /*=============== CLOSE MODAL ===============*/
+        const closeBtn = document.querySelectorAll('.close-modal')
+
+        function closeModal(){
+            const modalContainer = document.getElementById('modal-container')
+            modalContainer.classList.remove('show-modal')
+        }
+        closeBtn.forEach(c => c.addEventListener('click', closeModal))
+
+</script>

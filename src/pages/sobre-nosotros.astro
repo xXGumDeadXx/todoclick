@@ -1,0 +1,193 @@
+---
+import  Layout  from "../layouts/Layout.astro";
+import CardTeam from "../components/card-team.astro";
+---
+
+<Layout title="Sobre nosotros">
+    <main>
+            <section class="item quienes_somos">
+                <div>
+                    <h1>¿Quienes Somos?</h1>
+                    <h2>Todoklick</h2>
+                    <p>Somos la esencia de Venezuela, impulsando marcas y profesionales hacia el éxito con estrategias que resuenan y conectan. Tu triunfo, nuestra pasión.</p>
+                    <a href="/publica">Únete a nosotros</a>
+                </div>
+                <img src="/sobre-nosotros/1.png" alt="Quienes somos">
+            </section>
+    
+                <!--Nuestros valores-->
+            <section class="item valores">
+                <img src="/sobre-nosotros/2.png" alt="Valores">
+                <div>
+                    <h2>Nuestros Valores</h2>
+                    <p>Confianza, calidad, creatividad y velocidad. Estos son los pilares sobre los que se construye Todoklick. Nuestro objetivo es conectar a los mejores profesionales con tus proyectos, garantizando resultados excepcionales. ¡Con nosotros, tu éxito está asegurado!</p>
+                </div>
+            </section>
+    
+            <!--Nuestra mision-->
+            <section class="item mision">
+                <div>
+                    <h2>Nuestra misión</h2>
+                    <p>Nuestra misión es ayudarte a alcanzar tus metas, sin importar cuán grandes o pequeñas sean. Creemos en el poder de la colaboración y en la importancia de estar siempre a tu lado. ¡En Todoklick, tu éxito es nuestro éxito</p>
+                </div>
+                <img src="/sobre-nosotros/3.png" alt="Mision">
+            </section>
+    
+            <!--Nuestro problema-->
+            <section class="item problema">
+                <img src="/sobre-nosotros/4.png" alt="Problema">
+                <div>
+                    <h2>El problema</h2>
+                    <p>¿Cansado de buscar un profesional y no saber si es el indicado? Con Todoklick, olvídate de las dudas. ¡Te conectamos con los mejores profesionales para que puedas relajarte y disfrutar de los resultados!</p>
+                </div>
+            </section>
+    
+            <!--Heroe secction-->
+            <section class="item heroe">
+                <div>
+                    <h2>El Héroe</h2>
+                    <p>Trabaja con tranquilidad. Todoklick te conecta con una red de profesionales verificados y confiables. Olvídate de las dudas sobre la calidad del servicio. ¡Confía en nosotros para encontrar el talento que necesitas!</p>
+                </div>
+                <img src="/sobre-nosotros/5.png" alt="Heroe">
+            </section>
+    
+            <!--Nuestro equipo-->
+            <section class="item equipo">
+                <h2>Nuestro equipo</h2>
+                <div>
+                    <CardTeam src="https://i.ibb.co/0VXjnty/IMG-20240626-WA0029.jpg" nombre="Angel Linarez" job="Programador">
+                        <p>angeljlinarez@gmail.com</p>
+                        <p>kajshdkjs</p>
+                        <a href="" class="link">CV</a>
+                    </CardTeam>
+                    <CardTeam src="https://i.ibb.co/0VXjnty/IMG-20240626-WA0029.jpg" nombre="Angel Linarez" job="Programador">
+                        <p>angeljlinarez@gmail.com</p>
+                        <p>kajshdkjs</p>
+                        <a href="" class="link">CV</a>
+                    </CardTeam>
+                    <CardTeam src="https://i.ibb.co/0VXjnty/IMG-20240626-WA0029.jpg" nombre="Angel Linarez" job="Programador">
+                        <p>angeljlinarez@gmail.com</p>
+                        <p>kajshdkjs</p>
+                        <a href="" class="link">CV</a>
+                    </CardTeam>
+                    <CardTeam src="https://i.ibb.co/0VXjnty/IMG-20240626-WA0029.jpg" nombre="Angel Linarez" job="Programador">
+                        <p>angeljlinarez@gmail.com</p>
+                        <p>kajshdkjs</p>
+                        <a href="" class="link">CV</a>
+                    </CardTeam>
+                    <CardTeam src="https://i.ibb.co/0VXjnty/IMG-20240626-WA0029.jpg" nombre="Angel Linarez" job="Programador">
+                        <p>angeljlinarez@gmail.com</p>
+                        <p>kajshdkjs</p>
+                        <a href="" class="link">CV</a>
+                    </CardTeam>
+                    <CardTeam src="https://i.ibb.co/0VXjnty/IMG-20240626-WA0029.jpg" nombre="Angel Linarez" job="Programador">
+                        <p>angeljlinarez@gmail.com</p>
+                        <p>kajshdkjs</p>
+                        <a href="" class="link">CV</a>
+                    </CardTeam>
+                    <CardTeam src="https://i.ibb.co/0VXjnty/IMG-20240626-WA0029.jpg" nombre="Angel Linarez" job="Programador">
+                        <p>angeljlinarez@gmail.com</p>
+                        <p>kajshdkjs</p>
+                        <a href="" class="link">CV</a>
+                    </CardTeam>
+
+                </div>
+            </section>
+    </main>
+</Layout>
+
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    h1, h2,p {
+        margin: 1.3rem 1rem;
+    }
+.link{
+    color: white;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+    .item img{
+        width: 40%;
+    }
+    .item{
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        &:nth-child(2n+2){
+            background-color: #e6eaf1;
+        }
+    }
+    .item h2{
+        color: #5254CF;
+    }
+    .quienes_somos h1{
+        font-size: 2.5rem;
+    }
+    .quienes_somos h2, .equipo h2{
+        color: black;
+    }
+
+    .quienes_somos img{
+        margin: 1.5rem;
+    }
+    .quienes_somos p{
+        color: #E95959;
+        width: 50%;
+        margin-inlne: 1.5rem;
+    }
+
+    .quienes_somos img{
+        width: 30%;
+    }
+
+    .quienes_somos a{
+        background-color: #E95959;
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 1rem;
+    }
+    .equipo{
+        display: block;
+        height: auto;
+        text-align: center;
+    }
+
+    .equipo h2{
+        text-align: center;
+        font-size: 2.2rem;
+    }
+    .equipo > div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+
+    @media (max-width: 768px){
+
+        .item{
+            text-align: center;
+            flex-direction: column;
+        }
+        .quienes_somos p{
+            width: 100%;
+            margin: 0 auto 1.5rem;
+        }
+        .quienes_somos img{
+            width: 70%;
+        }
+    }
+</style>
