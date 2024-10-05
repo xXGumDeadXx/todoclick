@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/card-servicio.astro'
+import CardInfo from '../components/card-info.astro'
+---
+
+<Layout title='Servicio-restaurante'>
+    <div id="main-content">
+        <main>
+            <section class="hero">
+                <img src="/subcategoria/carro.webp" alt="Carro" class="hero-image">
+            </section>
+            <!-- Content Section -->
+            <section class="profiles">
+                <!--Obligatorio los atributos -->
+                <Card 
+                href="/carro/cruze-2011"
+                nombre="Chevrolet "
+                descripcion="Chevrolet Cruze 2011"
+                profesion="Auto casual"
+                src="/carro/1.webp"/>
+
+                <CardInfo 
+                title="¿Te gustaría que tu emprendimiento aparezca en nuestra página web?" 
+                descrip="Si buscas una forma eficaz de promover tu negocio, nos especializamos en ofrecer servicios que ayudan a emprendedores como tu, a publicar y promocionar sus proyectos en nuestra plataforma."/>
+                <!-- Repeat similar profile blocks as needed -->
+            </section>
+        </main>
+
+</Layout>
+<style>
+.hero {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero img{
+    width: 80%;
+}
+
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profiles {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile {
+        max-width: 90%;
+    }
+    
+    .hero img{
+        width: 100%;
+    }
+
+
+}
+</style>

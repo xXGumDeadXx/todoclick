@@ -16,18 +16,24 @@ import Hero from '../components/Hero.astro'
         <section class="nuestras-opciones">
             <h2>Nuestras opciones</h2>
             <div class="opciones-container">
-                <a href="/sobre-nosotros" class="opcion" title="Categoria">
+                <a href="/categoria" class="opcion" title="Categoria">
                     <img src="/flayer-principal/categoria.webp" alt="Outlet">
                 </a>
                 <a href="/publica" class="opcion" title="">
                     <img src="/flayer-principal/publica.webp" alt="">
                 </a>
-                <a href="/aboutUs" class="opcion" title="¿Quienes somos?">
+                <a href="/sobre-nosotros" class="opcion" title="¿Quienes somos?">
                     <img src="/flayer-principal/aboutUs.jpg" alt="¿Quienes somos?" >
                 </a>
             </div>
         </section>
-    
+        <section class="car-container"> 
+            <div>
+                <h2>¿Necesitas vender tu auto rapidamente?</h2>
+                <p>En Todoklick te lo vendemos rapido y seguro!</p>
+            </div>
+            <a href="/Servicio-carro">Klick aqui!</a>
+        </section>
         <!-- Servicios Destacados -->
         <section class="servicios-destacados">
             <h2>Servicios destacados</h2>
@@ -122,7 +128,7 @@ import Hero from '../components/Hero.astro'
             .nuestras-opciones h2, .servicios-destacados h2 {
                 font-size: 2.5rem;
                 color: #111;
-                margin: 2em 0 1em 0;
+                margin: 0 0 1em 0;
                 color: #9cca0b
             }
             .servicios-destacados h2{
@@ -148,6 +154,57 @@ import Hero from '../components/Hero.astro'
                 justify-content: center;
                 
             }
+
+            .car-container{
+                display: flex;
+                justify-content: space-between;
+                background-color: royalblue;
+                align-items: center;
+                color: white;
+                padding: 10px 20px;
+                width: 90%;
+                margin: 3em auto;
+                border-radius: 10px;
+                padding-inline: 100px;
+                
+            }
+
+            .car-container a{
+                color: white;
+                padding: 1rem;
+                border: 1px solid white;
+                border-radius: 30px;
+                transition: all .3s ease-in-out;
+            }
+            
+            .car-container a:hover{
+                    background-color: white;
+                    color: black;
+                    animation: shake .7s;
+                }
+
+                @keyframes shake {
+                    0% {
+                        transform: scale(1) rotate(0);
+                    }
+                    20% {
+                        transform: scale(1.1) rotate(-5deg); 
+                    }
+                    40% {
+                        transform: scale(1.1) rotate(5deg);   
+                    }
+                    60% {
+                        transform: scale(1.1) rotate(-5deg); 
+                    }
+                    80% {
+                     transform: scale(1.1) rotate(5deg);  
+                    }
+                    100% {
+                        transform: scale(1) rotate(0);    
+                    }
+                }
+
+
             .formas-container {
                 display: grid;
                 grid-template-columns: repeat(4, 200px);
@@ -255,6 +312,11 @@ import Hero from '../components/Hero.astro'
             }
                 .forma img {
                     width: 30%;
+                }
+
+                .car-container{
+                    flex-direction: column;
+                    text-align: center;
                 }
             }
         </style>

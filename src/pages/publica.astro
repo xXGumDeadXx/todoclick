@@ -8,13 +8,10 @@ import Layout from '../layouts/Layout.astro';
             <!--Section hero -->
             <section class="hero">
                 <div class="hero_container">
-                    <img src="/publica/publica-banner.webp" alt="Publica con nosotros">
-                    <div class="info_hero">
-                        <h1>Publica con nosotros</h1>
-                        <h2>¿Quieres publicarte en todoklick?</h2>
-                        <p>Estamos aqui para ayudarte .</p>
-                        <button id="open-modal">Haz Click aqui!</button>
-                    </div>
+                    <button id="open-modal">
+                        <img src="/publica/publica.webp" alt="Publica con nosotros">
+
+                    </button>
                 </div>
             </section>
             
@@ -212,35 +209,7 @@ import Layout from '../layouts/Layout.astro';
         margin: 10px 0;
         text-wrap: pretty;
     }
-    /*Hero section*/
-    .hero{
-        text-align: center;
-    }
 
-    .hero_container{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-    .info_hero{
-        position: absolute;
-    }
-
-    .info_hero{
-        font-size: 1.2rem;
-        color: white;
-        width: 80%;
-    }
-
-    .info_hero button{
-        padding: 1.1rem 1.2rem;
-        border-radius: 20px;
-        background-color: #fca311;
-        color: white;
-    }
 
     /*Section info*/
     .info h2, p{

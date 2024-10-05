@@ -9,32 +9,49 @@ import Layout from '../../layouts/Layout.astro'
         <!-- Categorías Section -->
         <section class="categories">
                 <a href="" class="category">
-                    <img src="https://i.ibb.co/YWZ2jfk/Dise-o-sin-t-tulo-20240704-193908-0000-removebg-preview.png" alt="Icono-pediatria" >
-                    <p>Pediatria</p>
+                    <img src="/iconos/sub-categoria-salud/img2.png" alt="Icono-pediatria" >
+                    <div class="text">
+                        <h3>Pediatria</h3>
+                        <p>El cuidado de tus pequeños en manos expertas.</p>
+                    </div>
                 </a>
 
                 <a href="/seleccionar servicio/index.html" class="category">
-                    <img src="https://i.ibb.co/pxf3sZD/Dise-o-sin-t-tulo-20240704-193535-0000-removebg-preview.png" alt="icono-psicolog-a" >
-                    <p>Psicologos</p>
+                    <img src="/iconos/sub-categoria-salud/img3.png" alt="icono-psicolog-a" >
+                    <div class="text">
+                        <h3>Psicologos</h3>
+                        <p>Tu bienestar emocional es importante.</p>
+                    </div>
                 </a>
 
                 <a href="../seleccion-servicio-odont" class="category">
-                    <img src="https://i.ibb.co/f8Kbv3S/Dise-o-sin-t-tulo-20240704-193453-0000-removebg-preview.png"  alt="Odontologia" >
-                    <p>Odontologia</p>
+                    <img src="/iconos/sub-categoria-salud/img4.png" alt="icono-odontologia">
+                    <div class="text">
+                        <h3>Odontologia</h3>
+                        <p>Sonríe con confianza</p>
+                    </div>
                 </a>
-
                 <a href="/seleccionar servicio-estetica/index.html" class="category" >
-                    <img src="https://i.ibb.co/Bgsrr5t/Dise-o-sin-t-tulo-20240704-193654-0000-removebg-preview.png" alt="Iconos-oftalmolog-a"  >
-                    <p>Oftalmologia</p>
+                    <img src="/iconos/sub-categoria-salud/img1.png" alt="Iconos-oftalmolog-a"  >
+                    <div class="text">
+                        <h3>Oftalmologia</h3>
+                        <p>Una visión clara para un mundo mejor.</p>
+                    </div>
                 </a>
 
                 <a href="/seleccionar servicio-comida/index.html"  class="category" >
-                    <img src="https://i.ibb.co/SyfwP7k/cono-neumologia.png" alt="cono-neumologia">
-                    <p>Neumonologia</p>
+                    <img src="/iconos/sub-categoria-salud/img5.png" alt="cono-neumologia">
+                    <div class="text">
+                        <h3>Neumonologia</h3>
+                        <p>Respira tranquilo.</p>
+                    </div>
                 </a>
         </section>
 </Layout>
 <style>
+h3{
+    margin: 0;
+}
 /* Hero Section */
 .hero {
     width: 100%;
@@ -52,33 +69,37 @@ import Layout from '../../layouts/Layout.astro'
     display: grid;
     width: 60%;
     margin: 3rem auto;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 2rem;
+    justify-content: center;
 }
 
 .category {
+    margin:0 auto;
     background-color: transparent;
     border-radius: 10px;
-    text-align: center;
-    min-width: 200px;
+    text-align: left;
+    padding: 10px;
+    width: 350px;
     height: 150px;
-    max-width: 300px;
-    display: flex;
+    display:flex;
+    align-items: center;
+    justify-content: left;
     box-shadow: 0 0 10px 0 #00000036;
     transition: transform 0.3s ease-in-out;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 5px;
 }
 
 .category:hover {
     transform: scale(1.05);
 }
 
+.category h3 {
+    margin-bottom: 10px;
+}
 .category p {
     margin: 0;
     font-size: 18px;
-    font-weight: bold;
 }
 
 .category img{
@@ -94,15 +115,11 @@ import Layout from '../../layouts/Layout.astro'
         grid-template-columns: repeat(1,1fr);
     }
 }
+/*
 @media(max-width: 1200px){
     .categories{
         grid-template-columns: repeat(2,1fr);
     }
 }
-
-@media(max-width: 600px){
-    .categories{
-        grid-template-columns: repeat(1,1fr);
-    }
-}
+*/
 </style>
