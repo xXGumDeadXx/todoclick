@@ -1,51 +1,76 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/card-servicio.astro'
-import '../styles/StylesGlobal.css'
+
 
 import CardInfo from '../components/card-info.astro'
+
+const info = [
+    {
+        'href': '/cliente/dra.medina',
+        'nombre': 'Dra. Veriosca Medina',
+        'descrip': 'Dra. Veriosca Medina. Hacemos que las visitas al dentista sean una experiencia divertida. Odontología infantil con cariño.',
+        'profesion': 'Odontólogo',
+        'src': '/cliente/dra.medina/img1.png'
+},
+{
+        'href': '/cliente/clinica veneto copy',
+        'nombre': 'Clínica Vento Odontología',
+        'descrip': 'En Veneto Odontología, creemos en la odontología personalizada. Adaptamos nuestros tratamientos a tus necesidades y deseos, para que puedas lucir la sonrisa que siempre has soñado.',
+        'profesion': 'Odontólogo',
+        'src': '/cliente/clinica veneto/principal.png'
+},
+{
+        'href': '/cliente/od.mariangel',
+        'nombre': 'Od. Mariangel Mogollon',
+        'descrip': 'La Dra. Maringel es una odontóloga dedicada a brindar una atención dental integral y personalizada. Se centra en la salud bucal a largo plazo y en la satisfacción de sus pacientes.',
+        'profesion': 'Odontólogo',
+        'src': '/cliente/od.mariangel/principal.jpg'
+},
+]
+
 ---
 
 <Layout title='Servicio-odontologia'>
     <div id="main-content">
         <main>
             <section class="hero">
-                <img src="https://i.ibb.co/XpXsfJW/IMG-20240609-WA0019.jpg" alt="El solar de rosa" class="hero-image">
+                <img src="/servicios/odontologia.png" alt="Odontologia" class="hero-image">
             </section>
             <!-- Content Section -->
             <section class="profiles">
                 <!--Obligatorio los atributos -->
-                <Card 
-                href="/cliente/dra.medina"
-                nombre="Dra. Veriosca Medina"
-                descripcion="Especialista en el cuidado para los más consentidos de la casa. Profesional en el tratamiento con los pacientes pequeños así como también les brinda mucha confianza."
-                profesion="Odontólogo"
-                src="/cliente/dra.medina/img1.png" />
+                {
+                    info.map(({href, nombre, descrip, profesion, src}) => {
+                        return <Card
+                        href={href}
+                        nombre={nombre}
+                        descripcion={descrip}
+                        profesion={profesion}
+                        src={src}  />
+                    
+                    })
+                }
 
-                <Card
-                href="/cliente/clinica veneto"
-                nombre="Clínica Vento Odontología"
-                descripcion="En Vento Odontología, entendemos que una sonrisa hermosa va más allá de la estética; es una ventana a su bienestar general. Por eso, nuestro equipo de profesionales altamente calificados está dedicado a asegurar que cada tratamiento sea personalizado, utilizando técnicas de vanguardia para prevenir, diagnosticar y tratar cualquier infección dental con la máxima precisión. "
-                profesion="Odontólogo"
-                src="/cliente/clinica veneto/principal.png" />
-                
-                <Card
-                href="/cliente/od.mariangel"
-                nombre="Od. Mariangel Mogollon"
-                descripcion="Soy la Dra. Mariangel Mogollón, una apasionada odontóloga con años de experiencia en cuidado bucal. Mi enfoque se basa en brindar tratamientos personalizados y de alta calidad para cada paciente. ¡Agenda tu cita hoy mismo!"
-                profesion="Odontólogo"
-                src="/cliente/od.mariangel/principal.jpg"  />
-
-                <CardInfo 
+                {
+                   info.length >0 ? <CardInfo 
+                    title="¿Te gustaría aprovechar este espacio sin competencia?" 
+                    descrip="Esta sección de nuestra página web no cuenta con clientes actualmente, lo que representa una oportunidad única para ti, asegúrate de que tu emprendimiento sea el primero en ocupar este espacio, captando toda la atención de nuestros visitantes!"/>
+                    : <CardInfo 
                 title="¿Te gustaría que tu emprendimiento aparezca en nuestra página web?" 
                 descrip="Si buscas una forma eficaz de promover tu negocio, nos especializamos en ofrecer servicios que ayudan a emprendedores como tu, a publicar y promocionar sus proyectos en nuestra plataforma."/>
+                }
+                
                 <!-- Repeat similar profile blocks as needed -->
             </section>
         </main>
 
 </Layout>
 <style>
-
+.hero{
+    width: 80%;
+    margin: 0 auto;
+}
 .profiles {
     display: flex;
     flex-wrap: wrap;
@@ -56,6 +81,10 @@ import CardInfo from '../components/card-info.astro'
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
+
+    .hero{
+        width: 100%;
+    }
     .profiles {
         flex-direction: row;
         align-items: center;

@@ -1,15 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/StylesGlobal.css'
+import Layout from '../layouts/Layout.astro'; 
 import Hero from '../components/Hero.astro'
+
+
 ---
 
 <Layout title="Todoklick">
-	<main>
-		
+    <main>
     </head>
     <body>
-    
         <!-- Banner Superior -->
             <Hero/>
         <!-- Nuestras Opciones -->
@@ -21,7 +20,7 @@ import Hero from '../components/Hero.astro'
                 </a>
                 <a href="/publica" class="opcion" title="">
                     <img src="/flayer-principal/publica.webp" alt="">
-                </a>
+                </a> 
                 <a href="/sobre-nosotros" class="opcion" title="¿Quienes somos?">
                     <img src="/flayer-principal/aboutUs.jpg" alt="¿Quienes somos?" >
                 </a>
@@ -38,17 +37,17 @@ import Hero from '../components/Hero.astro'
         <section class="servicios-destacados">
             <h2>Servicios destacados</h2>
             <div class="servicios-container">
-                <a href="./subcategoria/subcategoria-salud" class="servicio">
+                <a href="./subcategoria/subcategoria-salud" class="servicio" data-astro-prefetch='false'>
                     <img src="/flayer-principal/1.webp" alt="Salud">
                 </a>
-                <a href="/seleccion-servicio-mecanica" class="servicio">
+                <a href="/seleccion-servicio-mecanica" class="servicio" data-astro-prefetch='false'>
                     <img src="/flayer-principal/2.webp" alt="Mecanica">
                 </a>
                 <a href="/seleccion-servicio-comida" class="servicio">
-                    <img src="/flayer-principal/3.webp" alt="Restaurantes">
+                    <img src="/flayer-principal/3.webp" alt="Restaurantes" data-astro-prefetch='false'>
                     
                 </a >
-                <a href="/seleccion-servicio-estetica" class="servicio">
+                <a href="/seleccion-servicio-estetica" class="servicio" data-astro-prefetch='false'>
                     <img src="/estetica.webp" alt="Estetica">
                     
                 </a >
