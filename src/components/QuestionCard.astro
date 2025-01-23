@@ -1,0 +1,89 @@
+---
+interface Props {
+    pregunta: string,
+    respuesta: string,
+}
+
+const { pregunta, respuesta } = Astro.props;
+
+---
+
+
+
+<details class="question" id="details">
+    <summary class="question_titulo">{pregunta}</summary>
+    <p>{respuesta}</p>
+</details>
+<script>
+    document.addEventListener('click', (e)=>{
+    const question = document.querySelectorAll('.question');
+    
+    question.forEach(i =>{
+        const isClickDetail = i.contains(e.target);
+
+
+        if(!isClickDetail ){ 
+            i.removeAttribute('open');
+        }
+        
+    })
+    
+
+})
+</script>
+<style>
+    
+    .question{
+        background-color: transparent;
+        border-bottom: 1px solid #ccc;
+
+        &[open] >.question_titulo{
+            background-color: #cccccc41;
+        }
+        &:hover .question_titulo{
+            background-color: #cccccc41;
+        }
+    }
+
+
+    .question_titulo{
+        padding: 20px 0;
+    }
+
+
+    /*public section*/
+    .public img{
+        width: 100%;
+    }
+
+
+
+    /*responsive*/
+    @media(max-width: 800px){
+        main{
+            width: 90%;
+            
+        }
+        .info_list{
+            overflow-x: scroll;
+        }
+
+        .consejos_container{
+            overflow-x: scroll;
+        }
+
+        .consejos_item{
+            min-width: 310px;
+        }
+
+        .btn{
+            display: none;
+        }
+
+        .info_hero{
+        font-size: .5rem;
+    }
+
+    }
+
+</style>

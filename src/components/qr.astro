@@ -1,0 +1,143 @@
+---
+
+---
+
+<section class="qrcode" id="qrcode">
+    <h3>Comparte tu publicación con un codigo QR!</h3>
+    <button class="boton-qrcode">Mostrar QR</button>
+    <img src="" alt="QR" id="qrcode-link-img" class="qrcode-link" title="Haz click en la imagen para descargar el QR." alt="QR">
+</section>
+<script>
+    const botonQr = document.querySelector(".boton-qrcode");
+    const color_p = window.getComputedStyle(document.querySelector(".profile")).getPropertyValue("--color-principal").substring(1);
+    let scroll = false;
+    let url = `https://api.qrserver.com/v1/create-qr-code/?data=${window.location.href}&size=200x200&color=fff&bgcolor=${color_p}&margin=15`;
+    
+    const qrimg = document.querySelector("#qrcode-link-img");
+    Url(url)
+
+    function Url(url){
+        return qrimg.setAttribute("src", url)
+    }
+    
+    function isColorLightOrDark(hex) {
+        // Asegurarse de que el string tenga 3 caracteres hexadecimales
+         // Asegurarse de que el string sea un color hexadecimal válido (3 o 6 caracteres)
+    if (!/^[0-9a-fA-F]{3}$/.test(hex) && !/^[0-9a-fA-F]{6}$/.test(hex)) {
+        return "Entrada inválida. Ingresa un color hexadecimal de 3 o 6 letras (RGB o RRGGBB).";
+    }
+
+    let r, g, b;
+
+    if (hex.length === 3) {
+        // Expandir el color de 3 caracteres (RGB) a 6 caracteres (RRGGBB)
+        r = parseInt(hex[0] + hex[0], 16);
+        g = parseInt(hex[1] + hex[1], 16);
+        b = parseInt(hex[2] + hex[2], 16);
+    } else {
+        // Usar directamente los valores en 6 caracteres
+        r = parseInt(hex.slice(0, 2), 16);
+        g = parseInt(hex.slice(2, 4), 16);
+        b = parseInt(hex.slice(4, 6), 16);
+    }
+
+        // Calcular el brillo promedio usando una fórmula estándar
+        const brightness = (0.299 * r + 0.587 * g + 0.114 * b);
+
+        // Determinar si es claro u oscuro
+        return brightness > 128 ? true : false;
+    }
+
+    //Verifica si el color de la pagina es oscuro o claro para cambiar el color del QR
+    if(isColorLightOrDark(color_p) == true){
+        const qrcolor = "444";
+        url = `https://api.qrserver.com/v1/create-qr-code/?data=${window.location.href}&size=200x200&color=${qrcolor}&bgcolor=${color_p}&margin=15`;
+        Url(url)
+    } else{
+        const qrcolor = "fff";
+        url = `https://api.qrserver.com/v1/create-qr-code/?data=${window.location.href}&size=200x200&color=${qrcolor}&bgcolor=${color_p}&margin=15`;
+        Url(url)
+    }
+
+    botonQr.addEventListener("click", () => {
+        const link = document.querySelector(".qrcode-link");
+        link.classList.toggle("active");
+
+        botonQr.textContent = link.classList.contains("active") ? "Ocultar QR" : "Mostrar QR";
+        
+        if(!scroll){
+            window.scrollBy({
+                behavior: "smooth",
+                top: 200,
+            });
+            scroll = true;
+        };
+        
+    });
+
+    //Hacer un fetch para descargar la imagen
+    const qrcodeLink = document.querySelector(".qrcode-link");
+    qrcodeLink?.addEventListener("click", () => {
+        fetch(url)
+        .then(res => res.blob())
+        .then(blob =>{
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = 'CodigoQr.png';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        })
+    });                 
+
+</script>
+<style>
+h3{
+    margin: 0;
+    text-align: center;
+}
+.qrcode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 2rem;
+}
+.qrcode >img{
+    border-radius: 10px;
+    &:hover{
+        filter: grayscale(.3);
+    }
+}
+.qrcode-link{
+    max-width: 200px;
+    display: none;
+    margin-bottom: 2rem;
+    transition: all.2s ease-in-out;
+    cursor: pointer;
+}
+.boton-qrcode{
+    color: white;
+    margin: 1rem;
+    padding: .8rem 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--color-secundario);
+    &:hover{
+        background-color: var(--color-secundario);
+        filter:brightness(1.1);
+    }
+}
+.hidden{
+    display: none;
+    transform: translate(-20px);
+}
+.active{
+    display: block;
+    transform: translate(0);
+}
+</style>
